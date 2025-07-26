@@ -10,7 +10,7 @@ This document contains the technical implementation details of the Awesome Claud
 agents/
 ├── orchestrators/          # High-level coordinators
 │   ├── tech-lead-orchestrator.md
-│   └── context-detector.md
+│   └── project-analyst.md
 │
 ├── core/                   # Cross-cutting concerns
 │   ├── code-archaeologist.md
@@ -28,11 +28,11 @@ agents/
         └── laravel-backend-expert.md
 ```
 
-## 🔍 Context Detection System
+## 🔍 Project Analysis System
 
-### How Detection Works
+### How Analysis Works
 
-The context-detector agent analyzes project structure to identify:
+The project-analyst agent examines project structure to understand:
 
 ```yaml
 Detection Indicators:
@@ -44,16 +44,16 @@ Detection Indicators:
 - Cargo.toml → Rust
 ```
 
-### Detection Flow
+### Analysis Flow
 
 ```mermaid
 graph LR
     A[User Request] --> B[Tech Lead]
-    B --> C[Context Detector]
+    B --> C[Project Analyst]
     C --> D{Analyze Project}
     D --> E[Check Files]
-    E --> F[Identify Stack]
-    F --> G[Cache Context]
+    E --> F[Understand Stack]
+    F --> G[Cache Insights]
     G --> H[Return to Tech Lead]
 ```
 

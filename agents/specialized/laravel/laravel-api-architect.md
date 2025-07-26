@@ -320,7 +320,7 @@ $version = $request->header('API-Version', 'v1');
 ## Integration Points
 
 When working with other Laravel specialists:
-- **From context-detector**: Receive Laravel version, installed packages
+- **From project-analyst**: Receive Laravel version, installed packages
 - **To eloquent-expert**: Pass model relationships needing optimization
 - **To testing-expert**: Provide API endpoints and expected behaviors
 - **To queue-specialist**: Identify async operations

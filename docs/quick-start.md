@@ -136,7 +136,7 @@ claude /help
 
 ### 1. Orchestrators
 - **Tech Lead** - Coordinates complex tasks
-- **Context Detector** - Identifies your stack
+- **Project Analyst** - Understands your codebase
 
 ### 2. Core Agents (Always Available)
 - **Code Archaeologist** - Explores codebases

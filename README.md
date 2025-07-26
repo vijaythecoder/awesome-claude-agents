@@ -157,7 +157,7 @@ No configuration. No setup. Just results.
 After installing the agents, supercharge Claude for your specific project with one command:
 
 ```bash
-claude "Go through the available agents and my current project to understand which agents are needed for specific tasks. Then, update the CLAUDE.md file with these agents and workflows so it's very effective."
+claude "Analyze project, detect tech stack, configure CLAUDE.md with optimal agents and routing rules from ~/.claude/agents/. Map tasks to specialists: API endpoints, frontend components, database queries, performance optimization. Use framework-specific agents when available, universal fallbacks otherwise."
 ```
 
 Claude will:

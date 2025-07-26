@@ -1,276 +1,188 @@
 # Best Practices for Claude Agents
 
-This guide outlines best practices for creating and maintaining high-quality Claude sub-agents.
+Essential guidelines for creating effective, interconnected agents.
 
-## Agent Design Principles
+## Core Principles
 
 ### 1. Single Responsibility
-Each agent should focus on one specific domain or skill set. Avoid creating "Swiss Army knife" agents that try to do everything.
+Each agent should master ONE domain.
 
-✅ **Good**: `tailwind-frontend-expert` - Focused on Tailwind CSS
-❌ **Bad**: `general-developer` - Too broad
+✅ `tailwind-frontend-expert` - Just Tailwind CSS  
+❌ `full-stack-developer` - Too broad
 
-### 2. Clear Expertise Definition
-Define exactly what your agent knows and doesn't know. Set clear boundaries.
+### 2. XML-Style Examples
+Use Claude's pattern for smart invocation:
 
 ```yaml
-# Good description
-description: Expert in React component architecture, hooks, and performance optimization. Specializes in building scalable, maintainable React applications. Use proactively for React component design, state management, and optimization tasks.
-
-# Bad description  
-description: Helps with React stuff
+description: |
+  Laravel API developer.
+  
+  Examples:
+  - <example>
+    Context: User needs an API
+    user: "Create a REST API"  
+    assistant: "I'll use the laravel-api-expert"
+    <commentary>
+    API development is this agent's specialty
+    </commentary>
+  </example>
 ```
 
-### 3. Proactive Assistance
-Design agents to anticipate user needs and offer help without being asked.
+### 3. Delegation Awareness
+Agents should know their limits:
 
 ```markdown
-When I see:
-- Inefficient component re-renders
-- Missing error boundaries
-- Accessibility issues
-- Performance bottlenecks
+## Delegation Patterns
+When I need:
+- Frontend work → tailwind-frontend-expert
+- Security review → security-auditor
+- Database optimization → database-architect
+```
 
-I proactively suggest improvements and offer to implement them.
+## Writing Effective Descriptions
+
+### Include Multiple Examples
+Cover different scenarios:
+1. Common use case
+2. Edge case  
+3. Delegation scenario
+
+### Add Commentary
+Explain WHY the agent was chosen - this trains the pattern matching.
+
+### Specify Delegations
+Show how agents work together:
+
+```yaml
+Delegations:
+- <delegation>
+  Trigger: Frontend needed
+  Target: frontend-expert
+  Handoff: "API ready at /api/users"
+</delegation>
 ```
 
 ## System Prompt Best Practices
 
-### 1. Structure and Organization
-
-Use clear sections with headers:
-- Core Expertise
-- Working Principles
-- Task Approach
-- Best Practices
-- Common Patterns
-- Quality Standards
-
-### 2. Concrete Examples
-
-Always include code examples:
-
+### Clear Structure
 ```markdown
-## Common Patterns
+# Expert Title
 
-### Error Boundary Implementation
-```jsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
-    }
-    return this.props.children;
+You are [role] with [experience].
+
+## Core Expertise
+- Specific skills
+
+## Task Approach  
+1. How you work
+
+## Delegation Patterns
+When to hand off
+```
+
+### Concrete Examples
+Show, don't just tell:
+
+```php
+// Good: Specific example
+public function index(): JsonResponse
+{
+    return response()->json(
+        User::with('roles')->paginate(20)
+    );
+}
+
+// Bad: Vague description
+"Follow Laravel best practices"
+```
+
+## Interconnection Strategies
+
+### 1. Context Passing
+Pass rich information:
+
+```json
+{
+  "from": "laravel-backend",
+  "to": "react-frontend",
+  "context": {
+    "endpoints": ["/api/users"],
+    "auth": "Bearer token"
   }
 }
 ```
+
+### 2. Clear Handoff Points
+Define when to delegate:
+- Task complete → next phase
+- Outside expertise → specialist
+- Review needed → auditor
+
+### 3. Orchestration
+Use orchestrator agents for complex workflows:
+- Break down requirements
+- Coordinate specialists
+- Track progress
+
+## Testing Your Agents
+
+### 1. Invocation Testing
+```bash
+# Should trigger
+"Build a responsive navbar"
+
+# Should NOT trigger  
+"Create a Python script"
 ```
 
-### 3. Actionable Guidelines
+### 2. Delegation Testing
+Verify handoffs work correctly.
 
-Provide step-by-step approaches:
+### 3. Integration Testing
+Test complete workflows end-to-end.
 
-```markdown
-## Task Approach
-
-When optimizing a React component:
-1. Profile with React DevTools to identify bottlenecks
-2. Check for unnecessary re-renders
-3. Implement React.memo for pure components
-4. Use useMemo/useCallback for expensive operations
-5. Verify improvements with profiler
-```
-
-## Tool Usage Guidelines
-
-### 1. Minimal Tool Set
-
-Only request tools you actually need:
-
-| Agent Type | Recommended Tools |
-|------------|------------------|
-| Frontend Developer | Read, Write, Edit, MultiEdit, Grep, WebFetch |
-| Backend Developer | Read, Write, Edit, Bash, Grep, Glob |
-| DevOps Engineer | All tools |
-| Content Writer | Read, Write, WebFetch |
-
-### 2. Tool Justification
-
-Document why each tool is needed:
-
-```yaml
-tools: Read, Write, Edit, Bash, Grep
-# Read: Analyze existing code
-# Write: Create new components
-# Edit: Modify existing files
-# Bash: Run build commands and tests
-# Grep: Search for patterns in codebase
-```
-
-## Communication Style
-
-### 1. Professional Yet Approachable
-
-- Use technical terms appropriately
-- Explain complex concepts clearly
-- Maintain expertise without condescension
-
-### 2. Context-Aware Responses
-
-```markdown
-I adjust my communication based on:
-- User's apparent skill level
-- Project complexity
-- Time constraints
-- Specific requirements
-```
-
-### 3. Error Communication
-
-```markdown
-When encountering errors:
-1. Clearly state what went wrong
-2. Explain why it happened
-3. Provide 2-3 solution options
-4. Recommend the best approach
-5. Offer to implement the fix
-```
-
-## Quality Standards
-
-### 1. Code Quality
-
-All generated code should:
-- Follow language/framework conventions
-- Include proper error handling
-- Be well-commented when complex
-- Pass linting standards
-- Include TypeScript types when applicable
-
-### 2. Performance
-
-- Optimize for production use
-- Consider bundle size impacts
-- Implement lazy loading where appropriate
-- Use efficient algorithms and data structures
-
-### 3. Security
-
-- Never expose sensitive data
-- Validate all inputs
-- Follow OWASP guidelines
-- Use secure defaults
-- Document security considerations
-
-## Testing Your Agent
-
-### 1. Scenario Testing
-
-Create diverse test scenarios:
-- Common use cases
-- Edge cases
-- Error conditions
-- Complex requirements
-- Integration scenarios
-
-### 2. Quality Metrics
-
-Measure your agent's performance:
-- Task completion rate
-- Code quality
-- Response accuracy
-- Tool usage efficiency
-- User satisfaction
-
-### 3. Continuous Improvement
-
-- Gather user feedback
-- Monitor common issues
-- Update based on new best practices
-- Add new patterns and examples
-
-## Common Anti-Patterns to Avoid
+## Common Mistakes
 
 ### 1. Over-Engineering
-❌ Creating complex solutions for simple problems
-✅ Start simple, iterate based on needs
+Keep agents focused and simple.
 
-### 2. Tool Overuse
-❌ Requesting all tools "just in case"
-✅ Request only what you need
+### 2. Missing Examples
+Examples are crucial for pattern matching.
 
-### 3. Vague Instructions
-❌ "Follow best practices"
-✅ Specific, actionable guidelines
+### 3. No Delegation Info
+Isolated agents limit capability.
 
-### 4. Missing Context
-❌ Ignoring existing code patterns
-✅ Analyze and match project conventions
+### 4. Too Many Tools
+Only request necessary tools:
 
-### 5. One-Size-Fits-All
-❌ Same approach for all projects
-✅ Adapt to project size and requirements
+```yaml
+# Good: Specific tools
+tools: Read, Write, Edit, Bash
 
-## Maintenance Guidelines
-
-### 1. Regular Updates
-- Review agent performance monthly
-- Update for new framework versions
-- Add new patterns and best practices
-- Remove deprecated approaches
-
-### 2. Version Compatibility
-- Document framework version requirements
-- Note breaking changes
-- Provide migration guides
-- Support multiple versions when needed
-
-### 3. Community Feedback
-- Monitor issues and discussions
-- Implement suggested improvements
-- Credit contributors
-- Share learnings with community
-
-## Example: Well-Designed Agent Section
-
-```markdown
-## Core Expertise
-
-### State Management
-- **React Context API**: Efficient global state management for small to medium apps
-- **Redux Toolkit**: Modern Redux with less boilerplate for complex state
-- **Zustand**: Lightweight alternative for component state sharing
-- **React Query/SWR**: Server state management and caching
-- **Local State Patterns**: useState, useReducer best practices
-
-Each expertise area includes:
-- When to use it
-- Implementation patterns
-- Performance considerations
-- Common pitfalls
-- Testing strategies
+# Bad: Everything
+tools: # Inherits all (usually too much)
 ```
 
-## Conclusion
+## Optimization Tips
 
-Creating excellent Claude agents requires:
-1. Clear focus and expertise
-2. Well-structured system prompts
-3. Concrete examples and patterns
-4. Appropriate tool selection
-5. Continuous improvement
+### 1. Use Orchestrators
+For complex multi-step tasks.
 
-Remember: The best agents solve real problems efficiently while maintaining high quality standards.
+### 2. Parallel Execution
+Some agents can work simultaneously.
+
+### 3. Context Preservation  
+Pass information forward efficiently.
+
+### 4. Clear Boundaries
+Each agent should know exactly what it does and doesn't do.
+
+## Summary
+
+The best agents are:
+- **Focused** - One domain, deep expertise
+- **Connected** - Know when to delegate
+- **Smart** - Use XML examples for intelligent invocation
+- **Clear** - Well-documented with examples
+
+Build agents that work together like a real development team!

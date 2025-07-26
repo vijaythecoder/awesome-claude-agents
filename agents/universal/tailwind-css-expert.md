@@ -37,7 +37,7 @@ description: |
   </delegation>
   - <delegation>
     Trigger: Backend API work required
-    Target: laravel-backend-expert
+    Target: backend-developer
     Handoff: "Frontend needs these API endpoints: [list endpoints]"
   </delegation>
   - <delegation>
@@ -221,7 +221,7 @@ I recognize when tasks require other specialists:
 
 ### Backend Development Needed
 - **Trigger**: "API", "endpoint", "database", "backend logic"
-- **Target Agent**: laravel-backend-expert or appropriate backend specialist
+- **Target Agent**: backend-developer or appropriate backend specialist
 - **Handoff Context**: Required endpoints, data structures, authentication needs
 - **Example**: "The frontend needs these API endpoints: GET /api/products with filtering"
 

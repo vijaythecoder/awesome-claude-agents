@@ -1,214 +1,254 @@
 # Awesome Claude Agents 🚀
 
-**100x your development productivity** with specialized AI agents that work like a world-class software team. Language-agnostic, framework-agnostic, results-focused.
+**Context-aware AI agents that automatically detect your technology stack** and provide specialized expertise. Get framework-specific best practices without configuration.
 
-## 🎯 What Makes This Different?
+## 🧠 Intelligent Context Detection
 
-Unlike simple AI assistants, these agents:
-- 🧠 **Specialize deeply** in specific domains (like real team members)
-- 🤝 **Work together seamlessly** through intelligent handoffs
-- 🌍 **Support any technology** - JavaScript, Python, Go, Java, anything
-- 📈 **Scale with your needs** from solo projects to enterprise
+The system **automatically detects** what you're working with:
+- 🔍 Analyzes your project structure
+- 🎯 Identifies frameworks and languages
+- 🚀 Routes to specialized experts
+- 🔄 Falls back to universal agents when needed
+
+### How It Works
+
+```bash
+# In a Laravel project
+User: "Build an API"
+System: Detects Laravel → Uses laravel-api-architect
+
+# In a Django project  
+User: "Build an API"
+System: Detects Django → Uses django-api-developer
+
+# In an unknown project
+User: "Build an API"
+System: No framework → Uses universal api-architect
+```
+
+## 📁 Agent Organization
+
+```
+agents/
+├── orchestrators/          # Project coordinators
+│   ├── tech-lead-orchestrator.md
+│   └── context-detector.md
+│
+├── core/                   # Always available
+│   ├── code-archaeologist.md
+│   ├── code-reviewer.md
+│   ├── performance-optimizer.md
+│   └── security-guardian.md
+│
+├── universal/              # Framework-agnostic
+│   ├── api-architect.md
+│   ├── backend-developer.md
+│   ├── frontend-developer.md
+│   └── tailwind-css-expert.md
+│
+└── specialized/            # Deep expertise
+    ├── laravel/
+    │   ├── laravel-api-architect.md
+    │   ├── laravel-backend-expert.md
+    │   └── laravel-eloquent-expert.md
+    ├── react/
+    ├── django/
+    └── rails/
+```
+
+## 🎭 Available Agents
+
+### 🎯 Orchestrators
+**Intelligent project coordination**
+
+- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Context-aware project coordinator
+- **[Context Detector](agents/orchestrators/context-detector.md)** - Automatic technology detection
+
+### 💎 Core Agents
+**Cross-cutting expertise for any project**
+
+- **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores and documents any codebase
+- **[Code Reviewer](agents/core/code-reviewer.md)** - Universal code quality standards
+- **[Performance Optimizer](agents/core/performance-optimizer.md)** - Makes any system faster
+- **Security Guardian** *(coming soon)* - Security for all stacks
+
+### 🌐 Universal Agents
+**Framework-agnostic implementations**
+
+- **[API Architect](agents/universal/api-architect.md)** - RESTful and GraphQL design
+- **[Backend Developer](agents/universal/backend-developer.md)** - Multi-language backend expertise
+- **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern UI development
+- **[Tailwind CSS Expert](agents/universal/tailwind-css-expert.md)** - Utility-first CSS mastery
+
+### 🚀 Specialized Agents
+**Deep framework expertise**
+
+#### Laravel Specialists
+- **[Laravel API Architect](agents/specialized/laravel/laravel-api-architect.md)** - Laravel-specific API patterns
+- **[Laravel Backend Expert](agents/specialized/laravel/laravel-backend-expert.md)** - Full Laravel development
+- **[Laravel Eloquent Expert](agents/specialized/laravel/laravel-eloquent-expert.md)** - Database and ORM mastery
+
+#### More Specialists Coming Soon
+- React specialists
+- Django experts
+- Rails developers
+- Vue.js architects
+
+## 🔥 Key Features
+
+### 🤖 Automatic Framework Detection
+```yaml
+Project Indicators:
+- composer.json → Laravel/PHP
+- package.json → JavaScript/Node.js
+- requirements.txt → Python/Django
+- Gemfile → Ruby/Rails
+```
+
+### 🎯 Intelligent Routing
+The Tech Lead Orchestrator:
+1. Detects your project type
+2. Routes to appropriate specialists
+3. Falls back to universal agents
+4. Maintains context throughout
+
+### 🔗 Agent Collaboration
+Agents work together seamlessly:
+```
+User Request → Context Detection → Specialist Selection → Task Execution → Review
+```
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone the collection
-git clone https://github.com/yourusername/awesome-claude-agents.git
+# Clone the repository
+git clone https://github.com/bootstrapguru/awesome-claude-agents.git
 
-# Install agents globally
+# Install agents
 cp -r awesome-claude-agents/agents/* ~/.claude/agents/
 
-# Start building with your AI team!
-claude "Build a real-time chat application"
+# Start building!
+claude "Build a product API"
 ```
 
-Watch as agents collaborate:
-```
-Tech Lead → Code Archaeologist → Backend Expert → Frontend Expert → Code Reviewer → Performance Optimizer
-```
+## 💡 Usage Examples
 
-## 🤖 Your AI Development Team
+### Example 1: Laravel Project
+```bash
+# You're in a Laravel project
+> Build user authentication
 
-### 🎭 Orchestrators
-**Master coordinators who manage complex projects**
-
-- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Breaks down features, coordinates specialists
-- **Architect Orchestrator** *(coming soon)* - Designs system architecture
-
-### 💻 Core Development Team
-**Your everyday coding companions**
-
-- **[Code Archaeologist](agents/development/core/code-archaeologist.md)** - Explores and documents any codebase
-- **[Code Reviewer](agents/development/quality/code-reviewer.md)** - Ensures quality across all languages
-- **[Performance Optimizer](agents/development/quality/performance-optimizer.md)** - Makes any system faster
-- **Code Generator** *(coming soon)* - Creates boilerplate in any language
-- **Debugger Detective** *(coming soon)* - Solves the unsolvable bugs
-
-### 🛡️ Quality & Security
-**Guardians of code excellence**
-
-- **Security Guardian** *(coming soon)* - Finds and fixes vulnerabilities
-- **Test Engineer** *(coming soon)* - Writes comprehensive test suites
-- **Clean Code Enforcer** *(coming soon)* - Maintains best practices
-
-### 🏗️ Infrastructure & Operations
-**The backbone of your applications**
-
-- **DevOps Engineer** *(coming soon)* - CI/CD, deployment, scaling
-- **Database Optimizer** *(coming soon)* - Query and schema optimization
-- **API Architect** *(coming soon)* - RESTful, GraphQL, gRPC design
-
-### 📚 Specialized Experts
-**For specific technologies and frameworks**
-
-- **[Tailwind CSS Expert](agents/development/frontend/tailwind-frontend-expert.md)** - Utility-first CSS mastery
-- **[Laravel Code Auditor](agents/development/backend/laravel-code-auditor.md)** - Laravel security and best practices
-- **React Specialist** *(coming soon)* - React patterns and performance
-- **Python Data Scientist** *(coming soon)* - ML, data analysis, visualization
-
-## 🔗 See Them In Action
-
-### Example 1: Building a SaaS Application
-```
-User: "Build a subscription-based project management tool"
-
-Tech Lead Orchestrator coordinates:
-├─→ Code Archaeologist (analyze existing code)
-├─→ API Architect (design RESTful API)
-├─→ Database Optimizer (design schema)
-├─→ Frontend Expert (build UI)
-├─→ Payment Integration Expert (Stripe setup)
-├─→ Security Guardian (security audit)
-└─→ DevOps Engineer (deployment)
+# System automatically:
+1. Detects Laravel via composer.json
+2. Routes to laravel-backend-expert
+3. Implements Laravel Sanctum
+4. Follows Laravel conventions
 ```
 
-### Example 2: Performance Crisis
-```
-User: "Our app is crashing under load!"
+### Example 2: Unknown Stack
+```bash
+# You're in a new project
+> Build user authentication
 
-Performance Optimizer leads:
-├─→ Code Archaeologist (identify bottlenecks)
-├─→ Database Optimizer (fix slow queries)
-├─→ DevOps Engineer (scale infrastructure)
-└─→ Monitoring Specialist (set up alerts)
-```
-
-### Example 3: Legacy Modernization
-```
-User: "Modernize our 10-year-old Java monolith"
-
-Tech Lead Orchestrator plans:
-├─→ Code Archaeologist (map current architecture)
-├─→ Legacy Modernizer (create migration plan)
-├─→ Refactoring Expert (incrementally improve)
-├─→ Test Engineer (ensure safety)
-└─→ DevOps Engineer (containerize)
+# System automatically:
+1. No framework detected
+2. Routes to universal/backend-developer
+3. Implements framework-agnostic auth
+4. Uses JWT standards
 ```
 
-## 🌟 Key Features
+### Example 3: Mixed Stack
+```bash
+# Laravel backend + React frontend
+> Build a dashboard
 
-### 🧩 Technology Agnostic
-Works with **any** stack:
-- **Languages**: JavaScript, Python, Java, Go, Rust, PHP, Ruby, C#, Swift...
-- **Frameworks**: React, Django, Spring, Express, Rails, .NET, Flutter...
-- **Databases**: PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch...
-- **Platforms**: Web, Mobile, Desktop, IoT, Cloud, Serverless...
-
-### 🤝 Intelligent Collaboration
-Agents automatically:
-- Pass context between specialists
-- Identify when to delegate tasks
-- Maintain project continuity
-- Learn from each interaction
-
-### 📈 Real Productivity Gains
-- **10x faster** feature development
-- **90% fewer** bugs in production
-- **50% reduction** in technical debt
-- **100% coverage** of best practices
-
-## 🛠️ Advanced Usage
-
-### Custom Workflows
-Create your own agent combinations:
-
-```yaml
-# .claude/workflows/api-development.yaml
-name: api-development
-steps:
-  - agent: api-architect
-    task: Design RESTful endpoints
-  - agent: code-generator
-    task: Create boilerplate
-  - agent: test-engineer
-    task: Write integration tests
-  - agent: security-guardian
-    task: Security audit
+# System automatically:
+1. Detects both technologies
+2. Uses laravel-api-architect for API
+3. Uses react-specialist for UI
+4. Coordinates integration
 ```
 
-### Agent Configuration
-Each agent uses advanced patterns:
+## 🏗️ Architecture
 
-```yaml
-description: |
-  Expert in X, specializing in Y.
-  
-  Examples:
-  - <example>
-    Context: When this expertise is needed
-    user: "User request"
-    assistant: "I'll use agent-name"
-    <commentary>
-    Why this agent is perfect for this task
-    </commentary>
-  </example>
+### Context Detection Flow
+```mermaid
+graph LR
+    A[User Request] --> B[Tech Lead]
+    B --> C[Context Detector]
+    C --> D{Framework?}
+    D -->|Laravel| E[Laravel Specialists]
+    D -->|Django| F[Django Specialists]
+    D -->|Unknown| G[Universal Agents]
+    E --> H[Task Execution]
+    F --> H
+    G --> H
 ```
 
-## 📚 Documentation
-
-- [Quick Start Guide](docs/quick-start.md) - Get running in 5 minutes
-- [Creating Agents](docs/creating-agents.md) - Build your own specialists
-- [Interconnected Agents](docs/interconnected-agents.md) - Advanced workflows
-- [Best Practices](docs/best-practices.md) - Get the most from your AI team
+### Agent Selection Logic
+```javascript
+if (context.backend === "laravel" && task.type === "api") {
+  use("laravel-api-architect");
+} else if (context.backend === "django" && task.type === "api") {
+  use("django-api-developer");
+} else {
+  use("universal/api-architect");
+}
+```
 
 ## 🤝 Contributing
 
-We welcome contributions! Whether it's:
-- New specialist agents
-- Improved agent prompts
-- Bug fixes and improvements
-- Documentation and examples
+We welcome contributions! Add new specialists or improve existing agents:
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+1. Fork the repository
+2. Create your agent following our patterns
+3. Ensure it works with context detection
+4. Submit a pull request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+## 📚 Documentation
+
+- [Creating Agents](docs/creating-agents.md) - Build new specialists
+- [Interconnected Agents](docs/interconnected-agents.md) - Agent collaboration
+- [Best Practices](docs/best-practices.md) - Agent development tips
+- [Quick Start Guide](docs/quick-start.md) - Get running in 5 minutes
+
+## 🎯 Philosophy
+
+1. **Context First** - Understand the project before acting
+2. **Specialized Expertise** - Deep knowledge when available
+3. **Universal Fallback** - Always have a solution
+4. **Seamless Collaboration** - Agents work as a team
+
+## 🚀 Benefits
+
+- **Zero Configuration** - Just describe what you want
+- **Framework Best Practices** - Automatically applied
+- **Consistent Quality** - Across any technology
+- **Faster Development** - Right expertise instantly
+- **Learning Tool** - See how experts approach problems
 
 ## 🗺️ Roadmap
 
-### Currently Building
-- [ ] Complete core development team
-- [ ] Security and testing specialists
-- [ ] Infrastructure experts
-- [ ] Framework-specific agents
+### Currently Available
+- ✅ Context detection system
+- ✅ Laravel specialists
+- ✅ Universal agents
+- ✅ Core utilities
 
-### Future Plans
-- [ ] Industry-specific agents (FinTech, HealthTech, etc.)
-- [ ] Language-specific experts
-- [ ] Project management agents
-- [ ] Business analysis agents
-
-## 💡 Philosophy
-
-We believe AI should work like the best development teams:
-- **Specialists over generalists** - Deep expertise wins
-- **Collaboration over isolation** - Agents work together
-- **Universal over specific** - Support all technologies
-- **Practical over theoretical** - Real code, real results
+### Coming Soon
+- [ ] React specialists
+- [ ] Django experts
+- [ ] Vue.js architects
+- [ ] Rails developers
+- [ ] More frameworks
 
 ## 📊 Community
 
 - ⭐ Star this repo to show support
-- 🐛 [Report issues](https://github.com/yourusername/awesome-claude-agents/issues)
-- 💬 [Join discussions](https://github.com/yourusername/awesome-claude-agents/discussions)
+- 🐛 [Report issues](https://github.com/bootstrapguru/awesome-claude-agents/issues)
+- 💬 [Join discussions](https://github.com/bootstrapguru/awesome-claude-agents/discussions)
 - 🏆 [See who's using it](USERS.md)
 
 ## 📄 License
@@ -218,12 +258,12 @@ MIT License - Use freely in your projects!
 ---
 
 <p align="center">
-  <strong>Ready to 100x your productivity?</strong><br>
-  Start using Awesome Claude Agents today!
+  <strong>Experience intelligent, context-aware development assistance!</strong><br>
+  The right expert for your stack, automatically.
 </p>
 
 <p align="center">
-  <a href="https://github.com/yourusername/awesome-claude-agents">GitHub</a> •
+  <a href="https://github.com/bootstrapguru/awesome-claude-agents">GitHub</a> •
   <a href="docs/quick-start.md">Quick Start</a> •
   <a href="https://discord.gg/awesome-claude-agents">Discord</a>
 </p>

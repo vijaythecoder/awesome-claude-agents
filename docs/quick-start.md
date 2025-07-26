@@ -1,115 +1,130 @@
-# Quick Start Guide - 100x Your Productivity in 5 Minutes
+# Quick Start Guide - Context-Aware AI Agents
 
-## Installation
+## 🚀 Installation (2 minutes)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/awesome-claude-agents.git
+git clone https://github.com/bootstrapguru/awesome-claude-agents.git
 
-# Copy agents to your Claude Code directory
+# Copy agents to Claude Code directory
 cp -r awesome-claude-agents/agents/* ~/.claude/agents/
 
 # Verify installation
 claude /agents
 ```
 
-## Your First Agent Experience
+## 🧠 How Context Detection Works
 
-### Example 1: Understanding a Codebase
+The system **automatically detects** your project type:
+
+```yaml
+Laravel: composer.json + "laravel/framework"
+Django: requirements.txt + "django"
+React: package.json + "react"
+Rails: Gemfile + "rails"
+```
+
+No configuration needed - just start working!
+
+## 🎯 Your First Experience
+
+### Example 1: In a Laravel Project
+
 ```bash
-> I need to understand this React codebase I inherited
+> cd my-laravel-app
+> Build a product API
 
-# Code Archaeologist automatically activates
-# Provides architecture overview, patterns, and documentation
+# System automatically:
+1. Detects Laravel via composer.json
+2. Activates laravel-api-architect
+3. Implements Laravel-specific patterns
+4. Uses Eloquent, Resources, Sanctum
 ```
 
-### Example 2: Building a Feature
+### Example 2: In Any Project
+
 ```bash
-> Build a user authentication system
+> cd my-new-project
+> Build a product API
 
-# Tech Lead Orchestrator coordinates:
-# - API design
-# - Database schema
-# - Frontend forms
-# - Security review
+# System automatically:
+1. No framework detected
+2. Activates universal/api-architect
+3. Implements framework-agnostic API
+4. Uses best practices for any stack
 ```
 
-### Example 3: Fixing Performance
+### Example 3: Understanding Code
+
 ```bash
-> The app is slow, fix it
+> What does this codebase do?
 
-# Performance Optimizer analyzes and fixes:
-# - Slow queries
-# - Memory leaks
-# - Bundle sizes
-# - API bottlenecks
+# Code Archaeologist activates
+# Analyzes structure, dependencies, patterns
+# Provides comprehensive overview
 ```
 
-## How Agents Work Together
+## 🔥 Real-World Scenarios
 
-Agents automatically collaborate based on the task:
+### Building Features
 
-```
-Simple Task → Single Agent
-Complex Task → Orchestrator → Multiple Specialists
-```
-
-### Real Example Flow
-
-**User**: "Build a REST API for a todo app"
-
-```
-1. Tech Lead Orchestrator activates
-   ↓
-2. API Architect designs endpoints
-   ↓
-3. Backend Developer implements
-   ↓
-4. Test Engineer writes tests
-   ↓
-5. Code Reviewer ensures quality
-   ↓
-6. Complete, tested API ready!
-```
-
-## Universal Technology Support
-
-Works with ANY stack you're using:
-
-### JavaScript/TypeScript
 ```bash
-> Build a React component with TypeScript
-> Create an Express API with authentication
-> Optimize this Next.js application
+# Laravel Project
+> Add user authentication
+
+Result: Implements Laravel Sanctum with:
+- Migration files
+- Auth controllers
+- API routes
+- Middleware setup
+
+# Unknown Project
+> Add user authentication
+
+Result: Implements JWT auth with:
+- Generic user model
+- Auth endpoints
+- Token management
+- Middleware pattern
 ```
 
-### Python
+### Fixing Problems
+
 ```bash
-> Create a Django REST API
-> Build a FastAPI microservice
-> Optimize this pandas data pipeline
+> The app is running slowly
+
+# Performance Optimizer activates
+# Detects your stack
+# Applies appropriate optimizations:
+- Laravel: Eager loading, query optimization
+- React: Component memoization, lazy loading
+- Database: Indexing, query analysis
 ```
 
-### Java/Kotlin
+### Code Review
+
 ```bash
-> Create a Spring Boot application
-> Build an Android app
-> Refactor this legacy Java code
+> Review my recent changes
+
+# Code Reviewer activates
+# Understands your framework
+# Checks for:
+- Framework best practices
+- Security issues
+- Performance concerns
+- Code quality
 ```
 
-### Any Language!
-Go, Rust, Ruby, PHP, C#, Swift - agents adapt to your technology.
+## 💡 Key Commands
 
-## Key Commands
-
-### List All Agents
+### List Available Agents
 ```bash
 claude /agents
 ```
 
 ### Force Specific Agent
 ```bash
-> Use the code-reviewer to check my changes
+> Use the laravel-api-architect to design endpoints
 ```
 
 ### Get Help
@@ -117,106 +132,120 @@ claude /agents
 claude /help
 ```
 
-## Advanced Tips
+## 🎭 Agent Types Explained
 
-### 1. Let Agents Delegate
-Don't specify every agent - let them hand off tasks:
+### 1. Orchestrators
+- **Tech Lead** - Coordinates complex tasks
+- **Context Detector** - Identifies your stack
+
+### 2. Core Agents (Always Available)
+- **Code Archaeologist** - Explores codebases
+- **Code Reviewer** - Quality assurance
+- **Performance Optimizer** - Speed improvements
+
+### 3. Universal Agents (Fallbacks)
+- **API Architect** - Generic API design
+- **Backend Developer** - Any language
+- **Frontend Developer** - Any framework
+
+### 4. Specialized Agents (When Detected)
+- **Laravel Experts** - Deep Laravel knowledge
+- **React Specialists** - React best practices
+- **Django Masters** - Django patterns
+
+## 🔗 How Agents Collaborate
+
+```mermaid
+graph TD
+    A[Your Request] --> B[Tech Lead]
+    B --> C[Context Detector]
+    C --> D{Framework?}
+    D -->|Laravel| E[Laravel Expert]
+    D -->|Unknown| F[Universal Agent]
+    E --> G[Implementation]
+    F --> G
+```
+
+## 🚀 Advanced Tips
+
+### 1. Trust the Detection
 ```bash
-# Good
-> Build a chat application
+# Just say what you want
+> Build a blog system
 
-# Not needed
-> Use tech lead, then backend, then frontend...
+# System figures out the rest
 ```
 
-### 2. Provide Context
-More context = better results:
+### 2. Provide Context When Needed
 ```bash
-# Good
-> Build a real-time chat with React frontend and Node.js backend, supporting 1000 concurrent users
-
-# Too vague
-> Make a chat
+# More specific = better results
+> Build a blog with comments and categories
 ```
 
-### 3. Trust the Process
-Agents know when to involve others:
-- Tech Lead brings in specialists
-- Code Reviewer calls Security Guardian if needed
-- Performance Optimizer involves Database Optimizer
-
-## Common Workflows
-
-### New Feature
-```
-Describe feature → Tech Lead plans → Specialists implement → Review → Deploy
+### 3. Let Agents Delegate
+```bash
+# They know when to hand off
+Tech Lead → Backend Expert → Frontend Expert → Done
 ```
 
-### Debug Issue
-```
-Describe problem → Debugger investigates → Expert fixes → Tester verifies
-```
+## 📊 What to Expect
 
-### Understand Code
-```
-Point to codebase → Code Archaeologist explores → Documentation ready
-```
+### In Framework Projects
+- Framework-specific implementations
+- Best practices automatically applied
+- Optimal performance patterns
+- Native feature usage
 
-### Optimize Performance
-```
-Report slowness → Performance Optimizer profiles → Specialists fix → Faster app
-```
+### In Generic Projects
+- Clean, maintainable code
+- Industry best practices
+- Framework-agnostic patterns
+- Easy to migrate later
 
-## What's Next?
-
-1. **Try Different Agents**
-   - Each has unique expertise
-   - They work better together
-
-2. **Build Something**
-   - Start with a small feature
-   - Watch agents collaborate
-
-3. **Create Custom Workflows**
-   - Chain agents for your process
-   - Save common patterns
-
-4. **Contribute**
-   - Create new agents
-   - Improve existing ones
-   - Share your workflows
-
-## Troubleshooting
+## 🐛 Troubleshooting
 
 ### Agents Not Found
 ```bash
-# Check installation
 ls ~/.claude/agents/
-
-# Reinstall if needed
-cp -r awesome-claude-agents/agents/* ~/.claude/agents/
+# Should show: orchestrators/ core/ universal/ specialized/
 ```
 
 ### Wrong Agent Activated
 ```bash
-# Be more specific
-> Use the performance-optimizer to check database queries
+# Check detection
+> Show me the detected project context
 
-# Or provide more context
-> The database queries are slow (triggers database-optimizer)
+# Or force specific agent
+> Use the laravel-backend-expert for this task
 ```
 
-### Need Specific Technology
+### Need Different Framework
 ```bash
-# Agents adapt to your stack
-> Build this in [Go/Rust/Elixir/any language]
+# Agents adapt to what they find
+# Just start coding in your preferred stack
 ```
 
-## Pro Tips
+## 🎯 Pro Tips
 
-1. **Start Small** - Let one agent impress you
-2. **Think in Workflows** - Agents chain naturally
-3. **Trust Delegation** - They know when to hand off
-4. **Learn from Output** - See how experts approach problems
+1. **Start Simple** - Let detection work its magic
+2. **Build Incrementally** - Agents maintain context
+3. **Trust Expertise** - They know the patterns
+4. **Learn from Output** - See best practices in action
 
-Ready to experience 100x productivity? Start with any task!
+## 🚀 Next Steps
+
+1. **Try Different Tasks**
+   - Building features
+   - Fixing bugs
+   - Optimizing performance
+   - Understanding code
+
+2. **Explore Specialists**
+   - Each has unique expertise
+   - They collaborate seamlessly
+
+3. **Create Projects**
+   - Any technology stack
+   - Agents adapt automatically
+
+Ready to experience context-aware development? Just start building!

@@ -133,7 +133,7 @@ When given a task, you:
 
 - Use lowercase with hyphens: `tailwind-frontend-expert`
 - Be specific: `react-component-architect` not just `react-developer`
-- Include the domain: `laravel-api-architect`, `vue-ui-specialist`
+- Include the domain: `api-architect`, `ui-specialist`
 
 ### Required Documentation
 

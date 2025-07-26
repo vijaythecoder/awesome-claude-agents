@@ -42,15 +42,15 @@ Claude uses XML-style examples in descriptions for intelligent agent selection:
 
 ```yaml
 description: |
-  Expert Laravel backend developer specializing in APIs and security.
+  Expert backend developer specializing in APIs and security.
   
   Examples:
   - <example>
     Context: User needs to build an API
     user: "Create a REST API for products"
-    assistant: "I'll use the laravel-backend-expert to build a comprehensive products API"
+    assistant: "I'll use the backend-developer to build a comprehensive products API"
     <commentary>
-    API development is a core Laravel backend task
+    API development is a core backend task
     </commentary>
   </example>
   - <example>
@@ -127,7 +127,7 @@ Delegations:
 
 ### Backend → Frontend Flow
 ```
-Laravel Expert → API Complete → Frontend Expert → UI Built → Code Auditor
+Backend Expert → API Complete → Frontend Expert → UI Built → Code Reviewer
 ```
 
 ### Full Stack Development

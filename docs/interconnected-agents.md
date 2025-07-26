@@ -17,13 +17,13 @@ Use XML-style delegations to define handoff points:
 
 ```yaml
 description: |
-  Laravel backend API developer.
+  Expert backend API developer for any technology stack.
   
   Examples:
   - <example>
     Context: User needs full-stack feature
     user: "Build a user management system"
-    assistant: "I'll start with the Laravel backend, then hand off to frontend"
+    assistant: "I'll start with the backend API, then hand off to frontend"
     <commentary>
     Complex feature requiring backend-first approach
     </commentary>
@@ -32,12 +32,12 @@ description: |
   Delegations:
   - <delegation>
     Trigger: UI/Frontend needed
-    Target: tailwind-frontend-expert, react-specialist
+    Target: frontend-developer, ui-specialist
     Handoff: "API complete: POST /api/users, GET /api/users/{id}. Frontend can now integrate."
   </delegation>
   - <delegation>
     Trigger: Security review requested
-    Target: laravel-code-auditor
+    Target: security-guardian
     Handoff: "Feature complete. Ready for security audit focusing on: auth, validation, API endpoints"
   </delegation>
 ```
@@ -52,7 +52,7 @@ Include delegation logic in the agent's system prompt:
 I recognize these scenarios require other specialists:
 
 1. **Frontend Implementation**
-   - Signal: "UI", "interface", "frontend", "React", "Vue"
+   - Signal: "UI", "interface", "frontend", "client-side"
    - Action: Complete backend, document API, suggest frontend expert
    - Context passed: Endpoints, auth method, data structures
 
@@ -73,14 +73,14 @@ Create meta-agents that coordinate workflows:
 
 ```yaml
 ---
-name: laravel-project-orchestrator
+name: tech-lead-orchestrator
 description: |
-  Orchestrates full-stack Laravel projects by coordinating specialist agents.
+  Orchestrates complex software projects by coordinating specialist agents.
   
   Examples:
   - <example>
     Context: New feature request
-    user: "Add a blog system to my Laravel app"
+    user: "Add a blog system to my application"
     assistant: "I'll orchestrate this feature across multiple specialists"
     <commentary>
     Complex feature requiring coordination of backend, frontend, and review
@@ -89,7 +89,7 @@ description: |
 tools: Task
 ---
 
-You are a Laravel project orchestrator who coordinates specialist agents.
+You are a technical lead who coordinates specialist agents.
 
 ## Workflow Management
 
@@ -98,176 +98,222 @@ For full-stack features, I follow this pattern:
 1. **Requirements Analysis**
    - Break down the feature into components
    - Identify which specialists are needed
-   - Create execution plan
 
 2. **Backend Development**
-   - Delegate to: laravel-backend-expert
-   - Tasks: Models, migrations, controllers, API endpoints
-   - Output: Documented API ready for frontend
+   - Delegate to: backend-developer
+   - Context: Data models, API requirements
+   - Wait for: API documentation
 
-3. **Frontend Development** 
-   - Delegate to: tailwind-frontend-expert or framework specialist
-   - Tasks: UI components, API integration, state management
-   - Input: API documentation from backend phase
+3. **Frontend Development**
+   - Delegate to: frontend-developer
+   - Context: API endpoints, user stories
+   - Wait for: UI implementation
 
 4. **Integration Testing**
-   - Coordinate backend and frontend for full flow testing
-   - Identify integration issues
+   - Delegate to: test-engineer
+   - Context: Feature requirements, edge cases
+   - Wait for: Test coverage report
 
 5. **Security Review**
-   - Delegate to: laravel-code-auditor
-   - Tasks: Security audit, best practices review
-   - Input: Complete feature code
-
-6. **Deployment Preparation**
-   - Delegate to: deployment-specialist
-   - Tasks: Environment setup, optimization
+   - Delegate to: security-guardian
+   - Context: Complete implementation
+   - Wait for: Security approval
 ```
 
-## Real-World Workflows
+## Handoff Patterns
 
-### E-commerce Feature Flow
+### 1. Sequential Handoff
 
 ```mermaid
 graph LR
-    A[User Request] --> B[Project Orchestrator]
-    B --> C[Laravel Backend Expert]
-    C --> D[Database Architect]
-    D --> E[API Documentation]
-    E --> F[React Frontend Expert]
-    F --> G[Payment Integration Expert]
-    G --> H[Security Auditor]
-    H --> I[Deployment Specialist]
+    A[User Request] --> B[Tech Lead]
+    B --> C[Backend Developer]
+    C --> D[Frontend Developer]
+    D --> E[Code Reviewer]
+    E --> F[Complete]
 ```
 
-### API Development Flow
+Example workflow:
+1. Tech Lead analyzes requirements
+2. Backend Developer implements API
+3. Frontend Developer builds UI
+4. Code Reviewer validates everything
 
+### 2. Parallel Execution
+
+```yaml
+Parallel Tasks:
+- backend-developer: Create API endpoints
+- database-optimizer: Design schema
+- frontend-developer: Build UI mockups
 ```
-1. API Architect: Design RESTful structure
-2. Laravel Expert: Implement endpoints
-3. Database Expert: Optimize queries
-4. API Tester: Validate responses
-5. Documentation Expert: Generate API docs
+
+### 3. Conditional Routing
+
+```markdown
+If performance issues detected:
+  → performance-optimizer
+Else if security concerns:
+  → security-guardian
+Else:
+  → Continue normal flow
 ```
 
-## Context Passing
+## Context Passing Examples
 
-### Structured Handoffs
-
-Agents pass structured context:
+### Rich Context Object
 
 ```json
 {
-  "completed_by": "laravel-backend-expert",
-  "next_agent": "react-frontend-expert",
+  "task": "User authentication system",
+  "completed_by": "backend-developer",
+  "next_agent": "frontend-developer",
   "context": {
-    "api_endpoints": [
-      "GET /api/products",
-      "POST /api/products",
-      "PUT /api/products/{id}"
-    ],
-    "authentication": "Bearer token",
-    "cors_enabled": true,
-    "sample_response": { ... }
+    "endpoints": {
+      "login": "POST /api/auth/login",
+      "register": "POST /api/auth/register",
+      "refresh": "POST /api/auth/refresh"
+    },
+    "auth_method": "JWT",
+    "token_location": "Authorization header",
+    "validation_rules": {
+      "email": "required|email",
+      "password": "required|min:8"
+    }
   },
-  "notes": "Pagination implemented, 20 items per page"
+  "notes": "Using refresh tokens for security"
 }
 ```
 
-### Context Preservation
-
-Each agent adds to the context:
-
-```markdown
-## Handoff Protocol
-
-When completing my portion:
-1. Summarize what was implemented
-2. Document key decisions made
-3. List integration points
-4. Highlight potential issues
-5. Suggest next steps
-```
-
-## Advanced Patterns
-
-### Parallel Execution
-
-Some tasks can run in parallel:
+### Minimal Handoff
 
 ```yaml
-Workflows:
-- <workflow name="feature-development">
-  Parallel:
-    - laravel-backend-expert: API development
-    - database-architect: Schema design
-  Sequential:
-    - frontend-expert: After API complete
-    - security-auditor: After all development
-</workflow>
+From: code-archaeologist
+To: refactoring-expert
+Message: "Legacy code mapped. 15 services need modernization. Start with auth service."
 ```
 
-### Conditional Delegation
+## Orchestration Strategies
 
-Agents make smart decisions:
+### 1. Feature-Driven Orchestration
 
-```markdown
-If (user mentions "React"):
-  Delegate to react-specialist
-Elif (user mentions "Vue"):
-  Delegate to vue-expert
-Else:
-  Delegate to tailwind-frontend-expert
+For new features:
+```
+Requirements → Design → Implementation → Testing → Review → Deploy
 ```
 
-### Feedback Loops
+### 2. Problem-Driven Orchestration
 
-Agents can return to previous specialists:
+For debugging:
+```
+Reproduce → Investigate → Fix → Verify → Document
+```
+
+### 3. Optimization-Driven Orchestration
+
+For performance:
+```
+Profile → Identify → Optimize → Measure → Monitor
+```
+
+## Best Practices
+
+### 1. Clear Boundaries
+
+Each agent should know:
+- What they do
+- What they don't do
+- Who to hand off to
+
+### 2. Information Preservation
+
+Pass forward:
+- Decisions made
+- Context discovered
+- Potential issues
+
+### 3. Avoid Circular Dependencies
 
 ```
-Frontend Expert → "API missing user avatar field" → Backend Expert → Update API → Frontend Expert
+❌ A → B → C → A (circular)
+✅ A → B → C → Done (linear)
+✅ A → [B,C] → D (parallel merge)
 ```
-
-## Creating Your Own Workflows
-
-1. **Map the Process**: Identify all steps in your workflow
-2. **Assign Specialists**: Match each step to an agent
-3. **Define Handoffs**: Specify what context passes between agents
-4. **Handle Edge Cases**: Plan for errors and revisions
-5. **Test End-to-End**: Ensure smooth execution
-
-## Benefits
-
-- **Mirrors Real Teams**: Works like actual development teams
-- **Expertise Isolation**: Each agent masters one domain
-- **Scalable Complexity**: Handle projects of any size
-- **Context Aware**: Information flows naturally
-- **Quality Gates**: Built-in review stages
 
 ## Example: Full-Stack Feature
 
-User: "Build a product catalog with admin panel"
+**User**: "Build a real-time notification system"
+
+**Orchestration**:
+
+1. **Tech Lead** breaks down:
+   - Backend: WebSocket server
+   - Frontend: Notification UI
+   - Database: Message storage
+   - Infrastructure: Redis pub/sub
+
+2. **Parallel execution**:
+   - backend-developer: WebSocket implementation
+   - database-optimizer: Schema design
+   - frontend-developer: UI components
+
+3. **Integration**:
+   - Full-stack coordination
+   - End-to-end testing
+
+4. **Review**:
+   - Code review
+   - Security audit
+   - Performance check
+
+## Advanced Patterns
+
+### 1. Specialist Pools
+
+```yaml
+Frontend Pool:
+  - react-specialist
+  - vue-expert
+  - angular-developer
+  
+Backend Pool:
+  - node-expert
+  - python-developer
+  - go-specialist
+```
+
+### 2. Dynamic Selection
+
+```markdown
+Based on project stack:
+- If React → react-specialist
+- If Vue → vue-expert
+- If Vanilla → frontend-developer
+```
+
+### 3. Feedback Loops
 
 ```
-1. Project Orchestrator analyzes requirements
-2. Laravel Expert creates:
-   - Product model and migration
-   - CRUD API endpoints
-   - Admin middleware
-3. Database Architect optimizes:
-   - Indexes for search
-   - Query performance
-4. React Expert builds:
-   - Product listing component
-   - Admin dashboard
-   - API integration
-5. Security Auditor reviews:
-   - Authentication flow
-   - Authorization rules
-   - Input validation
-6. Deployment Expert handles:
-   - Production setup
-   - Performance optimization
+Initial Implementation → Review → Fixes → Re-review → Approved
 ```
 
-Each agent completes their portion and passes rich context to the next, creating a seamless development experience.
+## Common Pitfalls
+
+### 1. Over-Orchestration
+Don't coordinate simple tasks that one agent can handle.
+
+### 2. Context Loss
+Always pass sufficient context forward.
+
+### 3. Unclear Handoffs
+Be explicit about what's done and what's next.
+
+## Summary
+
+Interconnected agents enable:
+- **Complex workflows** - Mirror real team dynamics
+- **Parallel execution** - Multiple agents working simultaneously  
+- **Context preservation** - Information flows seamlessly
+- **Quality gates** - Reviews and checks at each stage
+
+Build agents that collaborate like your best development team!

@@ -15,15 +15,15 @@ Use Claude's pattern for smart invocation:
 
 ```yaml
 description: |
-  Laravel API developer.
+  Expert API developer for any technology stack.
   
   Examples:
   - <example>
     Context: User needs an API
     user: "Create a REST API"  
-    assistant: "I'll use the laravel-api-expert"
+    assistant: "I'll use the api-architect to design the endpoints"
     <commentary>
-    API development is this agent's specialty
+    API design is this agent's specialty
     </commentary>
   </example>
 ```
@@ -84,16 +84,18 @@ When to hand off
 Show, don't just tell:
 
 ```php
-// Good: Specific example
-public function index(): JsonResponse
-{
-    return response()->json(
-        User::with('roles')->paginate(20)
-    );
-}
+// Good: Specific example in any language
+// JavaScript/Express
+app.get('/api/users', async (req, res) => {
+  const users = await User.findAll({ 
+    include: ['roles'],
+    limit: 20 
+  });
+  res.json(users);
+});
 
 // Bad: Vague description
-"Follow Laravel best practices"
+"Follow best practices"
 ```
 
 ## Interconnection Strategies
@@ -103,8 +105,8 @@ Pass rich information:
 
 ```json
 {
-  "from": "laravel-backend",
-  "to": "react-frontend",
+  "from": "backend-developer",
+  "to": "frontend-developer",
   "context": {
     "endpoints": ["/api/users"],
     "auth": "Bearer token"

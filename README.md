@@ -152,6 +152,46 @@ Our agents enhance Claude Code's built-in capabilities:
 
 No configuration. No setup. Just results.
 
+## 🎯 Optimize for Your Project
+
+After installing the agents, supercharge Claude for your specific project with one command:
+
+```bash
+claude "Go through the available agents and my current project to understand which agents are needed for specific tasks. Then, update the CLAUDE.md file with these agents and workflows so it's very effective."
+```
+
+Claude will:
+- ✅ Analyze your project structure and technology stack
+- ✅ Identify which specialized agents match your needs  
+- ✅ Create custom workflows for your development patterns
+- ✅ Configure CLAUDE.md with optimal agent assignments
+- ✅ Set up intelligent routing for maximum productivity
+
+### What This Does
+
+Your CLAUDE.md will be configured with:
+- **The Right Experts**: Laravel project? Get Laravel specialists. React app? Get React experts.
+- **Smart Workflows**: Common tasks automatically route to the best agent
+- **Project Context**: Your specific patterns and conventions understood
+- **Team Coordination**: Agents that work together on your stack
+
+### Example Result
+
+For a Laravel + React project, Claude might configure:
+```markdown
+# Your AI Development Team Configuration
+
+When you say "build an API", I'll use @laravel-api-architect
+When you say "create components", I'll use @frontend-developer  
+When you need debugging, I'll use @code-archaeologist
+For everything else, I'll start with @tech-lead-orchestrator
+
+Your tech stack detected: Laravel 10, React 18, MySQL, Redis
+Specialized agents assigned for optimal results.
+```
+
+Now every request uses the perfect expert automatically!
+
 ## 📚 Learn More
 
 - [How Agent Teams Collaborate](docs/agent-team.md)

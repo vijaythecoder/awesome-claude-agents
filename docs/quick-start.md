@@ -18,10 +18,10 @@ ls ~/.claude/agents/
 
 ## 🎯 Configure Your Team
 
-Let the project optimizer analyze your project and assemble the perfect team:
+Let the team configurator analyze your project and assemble the perfect team:
 
 ```bash
-claude "Use project-optimizer to optimize my project"
+claude "Use team-configurator to set up my AI development team"
 ```
 
 ### What This Does:
@@ -161,7 +161,7 @@ claude "Use performance-optimizer and database expert to optimize queries"
 ### Team Not Configured?
 ```bash
 # Run the configuration command
-claude "Use project-optimizer to optimize my project"
+claude "Use team-configurator to set up my AI development team"
 ```
 
 ### Wrong Agent Activated?

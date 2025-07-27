@@ -39,7 +39,7 @@ cp -r awesome-claude-agents/agents ~/.claude/
 Navigate to your project directory and run:
 
 ```bash
-claude "Use project-optimizer to optimize my project"
+claude "Use team-configurator to set up my AI development team"
 ```
 
 ### 3. Start Building
@@ -51,7 +51,7 @@ Your AI team will automatically use the right specialists for your tech stack!
 
 ## 🎯 How Auto-Configuration Works
 
-The project-optimizer agent is your configuration expert. When invoked, it:
+The team-configurator agent is your AI team setup expert. When invoked, it:
 
 1. **Checks Existing Setup** - Looks for CLAUDE.md and preserves your customizations
 2. **Analyzes Your Stack** - Uses project-analyst to detect frameworks and patterns
@@ -89,7 +89,7 @@ Your AI development team is ready!
 ### 🎭 Orchestrators (3 agents)
 - **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Coordinates complex projects through three-phase workflow
 - **[Project Analyst](agents/orchestrators/project-analyst.md)** - Detects your tech stack and enables smart routing
-- **[Project Optimizer](agents/orchestrators/project-optimizer.md)** - Configures your perfect AI team automatically
+- **[Team Configurator](agents/orchestrators/team-configurator.md)** - Sets up your perfect AI development team automatically
 
 ### 💼 Framework Specialists (15 agents)
 - **Laravel** - Backend Expert, API Architect, Eloquent Expert

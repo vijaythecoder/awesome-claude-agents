@@ -35,10 +35,10 @@ cp -r awesome-claude-agents/agents ~/.claude/
 ```
 
 ### 2. Configure for Your Project
-Let Claude analyze your project and set up the perfect team:
+Navigate to your project directory and let the project optimizer analyze your project and set up the perfect team:
 
 ```bash
-claude "Analyze project, detect tech stack, configure CLAUDE.md with optimal agents and routing rules from ~/.claude/agents/. Map tasks to specialists: API endpoints, frontend components, database queries, performance optimization. Use framework-specific agents when available, universal fallbacks otherwise."
+claude "Use project-optimizer to optimize my project"
 ```
 
 ### 3. Start Building

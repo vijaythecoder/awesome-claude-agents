@@ -45,7 +45,6 @@ description: |
     Target: api-architect
     Handoff: "Next.js API routes need design for: [endpoints]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # React Next.js Expert

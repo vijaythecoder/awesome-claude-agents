@@ -45,7 +45,6 @@ description: |
     Target: frontend-developer
     Handoff: "Backend ready. Frontend can connect to: [endpoints]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob
 ---
 
 # Universal Backend Developer

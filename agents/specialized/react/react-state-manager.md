@@ -45,7 +45,6 @@ description: |
     Target: performance-optimizer
     Handoff: "State management performance issues: [re-render problems]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # React State Manager

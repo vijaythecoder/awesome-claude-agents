@@ -35,7 +35,6 @@ description: |
     Target: code-archaeologist
     Handoff: "Analyze this project structure to understand stack and patterns"
   </delegation>
-tools: Task, Read, Write, Glob, LS, Grep
 ---
 
 # Project Optimizer - Your AI Team Configuration Expert

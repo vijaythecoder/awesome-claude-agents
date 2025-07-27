@@ -45,7 +45,6 @@ description: |
     Target: refactoring-expert
     Handoff: "Performance requires architectural changes: [areas needing refactor]"
   </delegation>
-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # Performance Optimizer

@@ -45,7 +45,6 @@ description: |
     Target: api-architect
     Handoff: "Vue components need these API endpoints: [requirements]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Vue Component Architect

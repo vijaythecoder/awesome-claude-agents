@@ -45,7 +45,6 @@ description: |
     Target: laravel-testing-expert
     Handoff: "API complete. Need comprehensive tests for: [endpoints]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Laravel API Architect

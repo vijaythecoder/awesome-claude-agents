@@ -45,7 +45,6 @@ description: |
     Target: react-component-architect, vue-component-architect
     Handoff: "Backend complete. Frontend can consume: [endpoints and data]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob
 ---
 
 # Django Backend Expert

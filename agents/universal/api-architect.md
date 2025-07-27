@@ -45,7 +45,6 @@ description: |
     Target: security-guardian
     Handoff: "API design ready. Security review needed for: [auth and data flow]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Universal API Architect

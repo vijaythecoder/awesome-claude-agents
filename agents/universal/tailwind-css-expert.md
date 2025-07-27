@@ -45,7 +45,6 @@ description: |
     Target: security-auditor
     Handoff: "Frontend complete. Review needed for: XSS prevention, input validation, auth flow"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob, WebFetch
 ---
 
 # Tailwind CSS Frontend Expert

@@ -100,6 +100,41 @@ Delegations:
 </delegation>
 ```
 
+## Tool Configuration
+
+### Understanding Tool Inheritance
+
+The `tools` field in the agent frontmatter is **optional**. When you omit it, the agent inherits ALL available tools, including:
+- All built-in Claude Code tools (Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS, etc.)
+- WebFetch for accessing documentation and web resources
+- Any MCP (Model Context Protocol) tools from connected servers
+
+```yaml
+---
+name: my-agent
+description: "My agent description"
+# No tools field = inherits everything!
+---
+```
+
+### When to Specify Tools
+
+Only specify tools when you want to **restrict** an agent's capabilities:
+
+```yaml
+---
+name: code-reviewer
+description: "Reviews code without making changes"
+tools: Read, Grep, Glob, Bash  # Read-only tools for safety
+---
+```
+
+### Best Practices
+
+1. **Most agents should omit the tools field** - This gives maximum flexibility
+2. **Security-sensitive agents** - Explicitly list tools (e.g., reviewers get read-only)
+3. **Future-proof** - Omitting tools means new tools are automatically available
+
 ## Essential Components
 
 ### 1. Focused Expertise

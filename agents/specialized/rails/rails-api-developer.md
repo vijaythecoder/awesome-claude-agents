@@ -45,7 +45,6 @@ description: |
     Target: frontend-developer
     Handoff: "API ready at: [endpoints]. Documentation: [docs URL]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Rails API Developer

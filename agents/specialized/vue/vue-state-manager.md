@@ -45,7 +45,6 @@ description: |
     Target: performance-optimizer
     Handoff: "State management performance concerns: [bottlenecks identified]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Vue State Manager

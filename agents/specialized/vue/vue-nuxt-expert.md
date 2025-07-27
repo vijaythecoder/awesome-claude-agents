@@ -45,7 +45,6 @@ description: |
     Target: api-architect
     Handoff: "Nuxt server routes need API design for: [endpoints]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Vue Nuxt Expert

@@ -40,7 +40,6 @@ description: |
     Target: laravel-performance-expert
     Handoff: "Queries optimized. Consider caching: [heavy queries]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Laravel Eloquent Expert

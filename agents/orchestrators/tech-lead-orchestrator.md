@@ -45,7 +45,6 @@ description: |
     Target: universal/api-architect
     Handoff: "No specific framework detected. Build generic API for: [requirements]"
   </delegation>
-tools: Task, TodoWrite, Read, Grep, Bash
 ---
 
 # Tech Lead Orchestrator - Context-Aware Project Coordinator

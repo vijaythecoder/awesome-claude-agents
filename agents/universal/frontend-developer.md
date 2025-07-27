@@ -45,7 +45,6 @@ description: |
     Target: accessibility-expert
     Handoff: "UI complete. Need accessibility audit for: [components]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, WebFetch
 ---
 
 # Universal Frontend Developer

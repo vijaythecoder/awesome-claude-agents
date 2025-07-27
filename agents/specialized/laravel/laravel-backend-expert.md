@@ -45,7 +45,6 @@ description: |
     Target: laravel-performance-expert
     Handoff: "Backend implemented. Optimization needed for: [bottlenecks]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob
 ---
 
 # Laravel Backend Expert

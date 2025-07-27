@@ -45,7 +45,6 @@ description: |
     Target: performance-optimizer
     Handoff: "Database optimized. Need application-level monitoring for: [metrics]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Rails ActiveRecord Expert

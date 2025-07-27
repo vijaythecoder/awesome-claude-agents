@@ -45,7 +45,6 @@ description: |
     Target: frontend-developer
     Handoff: "API ready at: [endpoints]. Documentation: [swagger URL]"
   </delegation>
-tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---
 
 # Django API Developer

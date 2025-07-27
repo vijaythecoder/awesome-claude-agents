@@ -4,7 +4,7 @@
 
 ## 🎯 The Problem & Solution
 
-While Claude Code is powerful, complex projects need specialized expertise. Generic AI responses often miss framework-specific best practices, leading to suboptimal code.
+While Claude Code is powerful, complex projects need specialized expertise. Generic AI responses often miss best practices, leading to suboptimal code.
 
 **Our solution:** A team of specialized AI agents that work together, each with deep expertise in their domain. Just like a real development team, but available 24/7.
 
@@ -17,13 +17,14 @@ Without Agent Team:
 Claude: *Generic authentication implementation*
 
 With Agent Team:
-├── Tech Lead: "I'll coordinate this for your Laravel + React project"
-├── Laravel Expert: "Implementing Sanctum auth with role-based permissions"
-├── API Architect: "Designing RESTful resources with proper validation"
-├── Frontend Dev: "Building React components with hooks and context"
-└── Database Expert: "Optimizing Eloquent relationships and indexes"
+├── Tech Lead: "I'll coordinate this complex feature for your project"
+├── Project Analyst: "Detected Django + React stack, assembling specialists"
+├── Backend Expert: "Implementing authentication with Django patterns"
+├── API Architect: "Designing RESTful resources with validation"
+├── Frontend Dev: "Building React components with modern patterns"
+└── Database Expert: "Optimizing queries and relationships"
 
-Result: Production-ready, framework-specific, best-practice implementation
+Result: Production-ready implementation tailored to your stack
 ```
 
 ## 🚀 Quick Start (2 Minutes)
@@ -35,7 +36,7 @@ cp -r awesome-claude-agents/agents ~/.claude/
 ```
 
 ### 2. Configure for Your Project
-Navigate to your project directory and let the project optimizer analyze your project and set up the perfect team:
+Navigate to your project directory and run:
 
 ```bash
 claude "Use project-optimizer to optimize my project"
@@ -50,121 +51,152 @@ Your AI team will automatically use the right specialists for your tech stack!
 
 ## 🎯 How Auto-Configuration Works
 
-When you run the configuration command, Claude will:
+The project-optimizer agent is your configuration expert. When invoked, it:
 
-1. **Analyze Your Project** - Detects frameworks, languages, and patterns
-2. **Select Your Team** - Assigns specialists based on your tech stack
-3. **Create Workflows** - Sets up intelligent routing for common tasks
-4. **Configure CLAUDE.md** - Saves your team configuration
+1. **Checks Existing Setup** - Looks for CLAUDE.md and preserves your customizations
+2. **Analyzes Your Stack** - Uses project-analyst to detect frameworks and patterns
+3. **Scans Available Agents** - Discovers all agents in ~/.claude/agents/
+4. **Creates Smart Mappings** - Routes tasks to the perfect specialist
+5. **Updates CLAUDE.md** - Saves configuration without removing existing content
 
-Example configuration for a Laravel + React project:
+### Three-Phase Orchestration
+
+Your Tech Lead coordinates work through:
+- **Research Phase** - Multiple specialists gather information in parallel
+- **Planning Phase** - Creates tasks with TodoWrite, identifying dependencies
+- **Execution Phase** - Agents work together, sharing context efficiently
+
+Example output for a Django + React project:
 ```markdown
-# Your AI Development Team
+✅ Project Optimization Complete!
 
-Tech Stack: Laravel 10, React 18, MySQL, Redis
+Detected Stack:
+- Backend: Django 4.2 (Python)
+- Frontend: React 18 with TypeScript
+- Database: PostgreSQL
 
-Agent Assignments:
-- API tasks → @laravel-api-architect
-- Backend logic → @laravel-backend-expert  
-- Frontend → @frontend-developer
-- Database → @laravel-eloquent-expert
-- Performance → @performance-optimizer
+Configured Specialists:
+- API: @django-api-developer
+- Backend: @django-backend-expert
+- Frontend: @react-component-architect
+- Database: @django-orm-expert
 
-Your specialized team is ready!
+Your AI development team is ready!
 ```
 
 ## 👥 Meet Your AI Development Team
 
-### 🎭 Leadership
-- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Understands vague requirements, breaks down complex tasks, coordinates specialists
-- **[Project Analyst](agents/orchestrators/project-analyst.md)** - Deep understanding of your codebase structure and patterns
+### 🎭 Orchestrators (3 agents)
+- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Coordinates complex projects through three-phase workflow
+- **[Project Analyst](agents/orchestrators/project-analyst.md)** - Detects your tech stack and enables smart routing
+- **[Project Optimizer](agents/orchestrators/project-optimizer.md)** - Configures your perfect AI team automatically
 
-### 💼 Backend Specialists
-- **[Laravel Backend Expert](agents/specialized/laravel/laravel-backend-expert.md)** - Laravel patterns, Eloquent ORM, queues, events
-- **[Laravel API Architect](agents/specialized/laravel/laravel-api-architect.md)** - RESTful APIs, resources, Sanctum auth
-- **[Universal Backend Developer](agents/universal/backend-developer.md)** - Polyglot programmer for any backend language
+### 💼 Framework Specialists (15 agents)
+- **Laravel** - Backend Expert, API Architect, Eloquent Expert
+- **Django** - Backend Expert, API Developer, ORM Expert  
+- **Rails** - Backend Expert, API Developer, ActiveRecord Expert
+- **React** - Component Architect, State Manager, Next.js Expert
+- **Vue** - Component Architect, State Manager, Nuxt Expert
 
-### 🎨 Frontend Specialists
-- **[Frontend Developer](agents/universal/frontend-developer.md)** - React, Vue, Angular expertise with modern patterns
+### 🌐 Universal Experts (4 agents)
+- **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot programmer for any backend
+- **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern UI for any framework
+- **[API Architect](agents/universal/api-architect.md)** - RESTful and GraphQL design
 - **[Tailwind CSS Expert](agents/universal/tailwind-css-expert.md)** - Pixel-perfect responsive designs
 
-### 🔧 Code Quality Team
-- **[Code Archaeologist](agents/core/code-archaeologist.md)** - Understands and documents any codebase
-- **[Code Reviewer](agents/core/code-reviewer.md)** - Ensures best practices and standards
+### 🔧 Core Team (3 agents)
+- **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores and documents any codebase
+- **[Code Reviewer](agents/core/code-reviewer.md)** - Ensures quality and best practices
 - **[Performance Optimizer](agents/core/performance-optimizer.md)** - Makes everything blazing fast
+
+**Total: 25 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 
 ## 🎬 Real-World Examples
 
-### Building a SaaS Dashboard
+### E-commerce Shopping Cart
 ```
-You: "I need a dashboard for my SaaS with user analytics"
+You: "Add a shopping cart to my online store where users can add products, 
+update quantities, and see the total price with tax calculation"
 
-What happens:
-→ Tech Lead breaks down requirements
-→ Backend Expert creates analytics aggregation service
-→ API Architect designs efficient data endpoints  
-→ Frontend Dev builds interactive charts with React
-→ Performance Expert implements Redis caching
+Tech Lead orchestrates:
+→ Research: 
+  • Project Analyst detects Laravel + Vue.js stack
+  • Code Archaeologist examines existing product/user models
+  • API Architect reviews current endpoint patterns
+  
+→ Planning: Creates tasks for cart schema, API endpoints, UI components
+  
+→ Execution:
+  • Laravel Backend Expert creates Cart model and relationships
+  • Laravel API Architect builds RESTful cart endpoints
+  • Vue Component Architect implements reactive cart sidebar
+  • Backend Developer integrates tax calculation API
 
-Result: Complete, scalable dashboard following best practices
-```
-
-### Adding Real-Time Features
-```
-You: "Add real-time notifications to my app"
-
-Team collaboration:
-→ Backend Expert implements WebSocket server with Laravel Echo
-→ Frontend Dev creates notification components with real-time updates
-→ Database Expert designs efficient message storage
-→ Performance Expert ensures proper scaling
-
-Result: Production-ready real-time system
+Result: Working cart with persistent storage, guest checkout support, 
+        and automatic tax calculation based on user location
 ```
 
-### Debugging Complex Issues
+### User Authentication System
 ```
-You: "Users are complaining the app is slow"
+You: "I need users to sign up with email verification, login with remember me 
+option, and reset forgotten passwords"
 
-Investigation process:
-→ Performance Expert profiles your application
-→ Database Expert identifies N+1 query problems
-→ Backend Expert implements eager loading
-→ Frontend Dev adds proper loading states
-→ Caching Expert implements strategic caching
+Tech Lead orchestrates:
+→ Research:
+  • Project Analyst identifies Django + React setup
+  • Code Reviewer checks security requirements
+  • Django Backend Expert reviews existing User model
+  
+→ Planning: User model extension, JWT tokens, email templates, auth forms
+  
+→ Execution:
+  • Django Backend Expert implements registration with email verification
+  • Django API Developer creates secure auth endpoints
+  • React Component Architect builds responsive login/signup forms
+  • Performance Optimizer adds rate limiting and caching
 
-Result: 10x performance improvement with detailed optimization report
+Result: Complete auth system with JWT tokens, secure password hashing,
+        email verification, and forgot password flow
+```
+
+### Analytics Dashboard
+```
+You: "Show me daily active users, revenue trends for last 30 days, and 
+top-selling products in a dashboard"
+
+Tech Lead orchestrates:
+→ Research:
+  • Project Analyst detects Rails + React with PostgreSQL
+  • Performance Optimizer profiles current query performance
+  • Rails Backend Expert identifies data sources
+  
+→ Planning: Aggregation queries, caching strategy, chart components
+  
+→ Execution:
+  • Rails ActiveRecord Expert writes optimized analytics queries
+  • Performance Optimizer implements Redis caching layer
+  • React Component Architect builds interactive Chart.js visualizations
+  • Rails API Developer creates efficient data endpoints
+
+Result: Real-time dashboard with sub-second load times, export functionality,
+        and mobile-responsive design
 ```
 
 ## 🔥 Why Teams Beat Solo AI
 
-### 🧠 Specialized Expertise
-Each agent has deep knowledge in their domain. Your Laravel expert knows Eloquent inside-out, while your React specialist breathes hooks and context.
-
-### 👥 Real Collaboration
-Agents work together, handing off tasks and sharing context. The API architect coordinates with both backend and frontend specialists.
-
-### 🎯 Framework-Specific Solutions
-No more generic code. Get Laravel service providers, React custom hooks, Django class-based views - whatever matches YOUR stack.
-
-### ⚡ Faster Development
-Multiple specialists work in parallel. While one designs your API, another builds your UI components.
+- **Specialized Expertise**: Each agent masters their domain with deep, current knowledge
+- **Real Collaboration**: Agents coordinate seamlessly, sharing context and handing off tasks
+- **Tailored Solutions**: Get code that matches your exact stack and follows its best practices
+- **Parallel Execution**: Multiple specialists work simultaneously for faster delivery
 
 ## 📈 The Impact
 
-- **Ship 10x Faster** - Complete features in minutes, not days
-- **Better Code Quality** - Every line follows framework best practices
+- **Ship Faster** - Complete features in minutes, not days
+- **Better Code Quality** - Every line follows best practices
 - **Learn As You Code** - See how experts approach problems
 - **Scale Confidently** - Architecture designed for growth
-
-## 🎯 Perfect For
-
-- **Startups** - Build your MVP at lightning speed with production-ready code
-- **Agencies** - Handle any client technology stack with confidence
-- **Solo Developers** - Access a full team's expertise whenever you need it
-- **Enterprises** - Maintain consistency and best practices across teams
 
 ## 📚 Learn More
 
@@ -172,13 +204,6 @@ Multiple specialists work in parallel. While one designs your API, another build
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
 - [Architecture Guide](docs/architecture.md) - Technical deep dive
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
-
-## 🌈 Coming Soon
-
-- More framework specialists (Django, Rails, Vue.js)
-- Domain experts (E-commerce, FinTech, HealthTech)
-- DevOps team members
-- Mobile development specialists
 
 ## 💬 Join The Community
 
@@ -191,11 +216,14 @@ Multiple specialists work in parallel. While one designs your API, another build
 
 MIT License - Use freely in your projects!
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=vijaythecoder/awesome-claude-agents&type=Date)](https://www.star-history.com/#vijaythecoder/awesome-claude-agents&Date)
 ---
 
 <p align="center">
   <strong>Transform Claude Code into an AI development team that ships production-ready features</strong><br>
-  <em>No configuration. No complexity. Just describe and build.</em>
+  <em>Simple setup. Powerful results. Just describe and build.</em>
 </p>
 
 <p align="center">

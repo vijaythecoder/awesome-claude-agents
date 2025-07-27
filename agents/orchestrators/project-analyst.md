@@ -77,6 +77,7 @@ When analyzing a project, I provide structured insights that enable intelligent 
 - **Specialist Mapping**: Which agents are best suited for which tasks
 - **Communication Needs**: How different specialists should coordinate
 - **Parallelism Opportunities**: Tasks that can run simultaneously
+- **Uncertainties**: Any ambiguities or assumptions that need clarification
 
 This analysis is dynamically generated based on what I discover in the codebase, ensuring the Tech Lead can make optimal routing decisions.
 
@@ -108,6 +109,11 @@ This analysis is dynamically generated based on what I discover in the codebase,
    Medium Confidence: Structure matches + some indicators
    Low Confidence: Only structural hints
    ```
+
+5. **Ambiguity Flagging**
+   - Note if multiple frameworks detected
+   - Flag missing critical configurations
+   - List key assumptions made
 
 ## Integration with Tech Lead
 

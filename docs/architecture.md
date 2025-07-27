@@ -23,26 +23,29 @@ agents/
 │   └── frontend-developer.md
 │
 └── specialized/            # Framework-specific
-    └── laravel/
-        ├── laravel-api-architect.md
-        └── laravel-backend-expert.md
+    ├── laravel/
+    │   ├── laravel-api-architect.md
+    │   └── laravel-backend-expert.md
+    ├── django/
+    │   ├── django-api-developer.md
+    │   └── django-backend-expert.md
+    └── [other-frameworks]/
 ```
 
 ## 🔍 Project Analysis System
 
 ### How Analysis Works
 
-The project-analyst agent examines project structure to understand:
+The project-analyst agent examines project structure to detect the technology stack:
 
-```yaml
-Detection Indicators:
-- composer.json → Laravel/PHP
-- package.json → JavaScript/Node.js
-- requirements.txt → Python/Django
-- Gemfile → Ruby/Rails
-- go.mod → Go
-- Cargo.toml → Rust
-```
+**Common Detection Indicators:**
+- `composer.json` → PHP (Laravel, Symfony, etc.)
+- `package.json` → JavaScript/Node.js
+- `requirements.txt` or `Pipfile` → Python (Django, Flask, etc.)
+- `Gemfile` → Ruby (Rails, Sinatra, etc.)
+- `go.mod` → Go
+- `Cargo.toml` → Rust
+- `pom.xml` or `build.gradle` → Java (Spring, etc.)
 
 ### Analysis Flow
 
@@ -80,71 +83,45 @@ graph LR
 
 ## 🎯 Intelligent Routing
 
-### Agent Selection Algorithm
+### Agent Selection Process
 
-```javascript
-function selectAgent(task, context) {
-  // API Development
-  if (task.includes("api") || task.includes("endpoint")) {
-    if (context.backend === "laravel") {
-      return "laravel-api-architect";
-    }
-    return "universal/api-architect";
-  }
-  
-  // Frontend Development
-  if (task.includes("ui") || task.includes("component")) {
-    if (context.frontend === "react") {
-      return "react-component-architect";
-    }
-    return "universal/frontend-developer";
-  }
-}
-```
+The Tech Lead Orchestrator intelligently routes tasks based on the detected project context:
 
-### Specialist Priority Matrix
+**For API Development:**
+- If the project uses a specific backend framework (Laravel, Django, Rails, Express, etc.), the task goes to that framework's API specialist
+- For unknown or custom stacks, the universal API architect handles the task
 
-| Task Type | Laravel | Django | Rails | Unknown |
-|-----------|---------|--------|-------|---------|
-| API | laravel-api-architect | django-api-dev | rails-api | universal/api |
-| Auth | laravel-auth | django-auth | devise | universal/auth |
-| DB | eloquent-expert | django-orm | active-record | universal/db |
+**For Frontend Development:**
+- Framework-specific tasks go to specialized agents (React, Vue, Angular specialists)
+- Generic or unknown frontend work goes to the universal frontend developer
+
+**For Database Work:**
+- Projects with framework-specific ORMs get specialized database experts
+- General database tasks use the universal database architect
+
+This adaptive routing ensures every task is handled by the most knowledgeable specialist available, whether framework-specific or universal.
 
 ## 🔄 Agent Communication Protocol
 
-### Delegation Format
+### Delegation Communication
 
-```yaml
-From: tech-lead-orchestrator
-To: laravel-api-architect
-Context:
-  framework: Laravel 10.x
-  database: MySQL
-  existing_patterns:
-    - Repository pattern
-    - Service layer
-Task: Build product CRUD API
-Requirements:
-  - RESTful endpoints
-  - API Resources
-  - Validation
-  - Tests
-```
+When the Tech Lead delegates tasks, they provide clear context to specialists:
 
-### Response Format
+**To Framework Specialists:**
+"I'm assigning this API task to our Django specialist. The project uses Django 4.x with PostgreSQL. Please build the product CRUD endpoints following the project's existing patterns and using Django REST Framework."
 
-```yaml
-From: laravel-api-architect
-To: tech-lead-orchestrator
-Status: Complete
-Created:
-  - app/Http/Controllers/Api/ProductController.php
-  - app/Http/Resources/ProductResource.php
-  - app/Http/Requests/ProductRequest.php
-  - routes/api.php (updated)
-  - tests/Feature/ProductApiTest.php
-Next: Frontend implementation needed
-```
+**To Universal Agents:**
+"I'm assigning this to our universal API architect since no specific framework was detected. Please create RESTful endpoints using clean, maintainable patterns."
+
+### Agent Responses
+
+Specialists report back with clear summaries:
+
+**From Framework Specialist:**
+"I've completed the API implementation. Created the product endpoints with full CRUD operations, added validation, and included tests. The frontend team can now integrate with these endpoints."
+
+**From Universal Agent:**
+"API complete using standard RESTful patterns. I've documented the endpoints and response formats. The implementation is framework-agnostic and can be easily maintained."
 
 ## 🧩 Agent Capabilities
 

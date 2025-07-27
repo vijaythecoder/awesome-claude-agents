@@ -115,7 +115,7 @@ Django Structure:
 
 ## Context Analysis Output
 
-When analyzing a project, I provide:
+When analyzing a project, I provide comprehensive insights for orchestration:
 
 ```json
 {
@@ -153,13 +153,34 @@ When analyzing a project, I provide:
     "apiStyle": "rest",
     "authentication": "token-based"
   },
-  "recommendations": {
-    "specialists": [
-      "laravel-backend-expert",
-      "react-component-architect",
-      "mysql-optimization-expert"
-    ]
-  }
+  "specialist_mapping": {
+    "api_tasks": "laravel-api-architect",
+    "backend_logic": "laravel-backend-expert",
+    "frontend_ui": "react-component-architect",
+    "database": "mysql-optimization-expert",
+    "security": "security-guardian",
+    "performance": "performance-optimizer",
+    "testing": "test-engineer"
+  },
+  "communication_matrix": {
+    "backend_frontend": {
+      "agents": ["laravel-backend-expert", "react-component-architect"],
+      "topics": ["api_endpoints", "auth_flow", "data_formats"]
+    },
+    "backend_database": {
+      "agents": ["laravel-backend-expert", "database-optimizer"],
+      "topics": ["schema", "queries", "indexes"]
+    },
+    "frontend_api": {
+      "agents": ["react-component-architect", "laravel-api-architect"],
+      "topics": ["endpoints", "responses", "errors"]
+    }
+  },
+  "parallelism_opportunities": [
+    "API design and database schema can be done in parallel",
+    "Frontend mockups while backend implements",
+    "Testing and documentation can run parallel to development"
+  ]
 }
 ```
 
@@ -194,22 +215,56 @@ When analyzing a project, I provide:
 
 ## Integration with Tech Lead
 
-I provide context that enables intelligent routing:
+I provide comprehensive analysis that enables the Tech Lead's three-phase orchestration:
 
-```javascript
-// My output enables:
-if (context.backend.framework === "laravel") {
-  // Route to Laravel specialists
-  if (task.includes("api")) {
-    delegate("laravel-api-architect");
-  } else if (task.includes("queue")) {
-    delegate("laravel-queue-specialist");
-  }
-} else if (!context.backend.framework) {
-  // Fall back to universal agents
-  delegate("universal/backend-developer");
-}
+### For Research Phase
+```yaml
+Specialist Identification:
+  Based on detected stack:
+    - Laravel → laravel-backend-expert, laravel-api-architect
+    - React → react-component-architect, react-hooks-specialist
+    - MySQL → database-optimizer, query-performance-expert
+    
+  Universal fallbacks:
+    - Unknown backend → universal/backend-developer
+    - Unknown frontend → universal/frontend-developer
 ```
+
+### For Planning Phase
+```yaml
+Task Breakdown Insights:
+  Architecture: "Monolithic with service layer"
+  Suggests:
+    - Sequential: Database → Models → Services → Controllers → API
+    - Parallel: API design + Database schema
+    - Parallel: Backend implementation + Frontend mockups
+```
+
+### For Execution Phase
+```yaml
+Communication Requirements:
+  backend ↔ frontend:
+    - Share: API contracts, auth methods
+    - Coordinate: CORS, response formats
+    
+  backend ↔ database:
+    - Share: Schema changes, indexes
+    - Coordinate: Query optimization
+    
+  all → security:
+    - Share: Implementation details
+    - Coordinate: Security reviews
+```
+
+### Routing Intelligence
+
+My analysis enables the Tech Lead to make smart routing decisions:
+
+When a task involves API development, I've already mapped which specialist should handle it based on the detected framework. For a Laravel project, that's the laravel-api-architect. For Django, it's the django-api-developer. This mapping is provided in my analysis output.
+
+I also identify which agents need to communicate. For example, when both backend and frontend work is needed, I note that the laravel-backend-expert and react-component-architect will need to coordinate on API contracts and data formats.
+
+Additionally, I highlight opportunities for parallel execution. When I detect that API design and database schema can be developed simultaneously, I include this in my parallelism_opportunities analysis, helping the Tech Lead organize efficient task execution.
 
 ## Special Detection Cases
 

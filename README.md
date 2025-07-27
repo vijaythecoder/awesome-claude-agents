@@ -30,7 +30,7 @@ Result: Production-ready, framework-specific, best-practice implementation
 
 ### 1. Install the Agents
 ```bash
-git clone https://github.com/bootstrapguru/awesome-claude-agents.git
+git clone https://github.com/vijaythecoder/awesome-claude-agents.git
 cp -r awesome-claude-agents/agents ~/.claude/
 ```
 
@@ -183,9 +183,9 @@ Multiple specialists work in parallel. While one designs your API, another build
 ## 💬 Join The Community
 
 - ⭐ **Star this repo** to show support
-- 🐛 [Report issues](https://github.com/bootstrapguru/awesome-claude-agents/issues)
-- 💡 [Share ideas](https://github.com/bootstrapguru/awesome-claude-agents/discussions)
-- 🎉 [Success stories](https://github.com/bootstrapguru/awesome-claude-agents/discussions/categories/show-and-tell)
+- 🐛 [Report issues](https://github.com/vijaythecoder/awesome-claude-agents/issues)
+- 💡 [Share ideas](https://github.com/vijaythecoder/awesome-claude-agents/discussions)
+- 🎉 [Success stories](https://github.com/vijaythecoder/awesome-claude-agents/discussions/categories/show-and-tell)
 
 ## 📄 License
 
@@ -199,7 +199,7 @@ MIT License - Use freely in your projects!
 </p>
 
 <p align="center">
-  <a href="https://github.com/bootstrapguru/awesome-claude-agents">GitHub</a> •
+  <a href="https://github.com/vijaythecoder/awesome-claude-agents">GitHub</a> •
   <a href="docs/quick-start.md">Documentation</a> •
-  <a href="https://github.com/bootstrapguru/awesome-claude-agents/discussions">Community</a>
+  <a href="https://github.com/vijaythecoder/awesome-claude-agents/discussions">Community</a>
 </p>

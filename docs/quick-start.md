@@ -4,7 +4,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/bootstrapguru/awesome-claude-agents.git
+git clone https://github.com/vijaythecoder/awesome-claude-agents.git
 
 # Copy agents to Claude Code directory
 cp -r awesome-claude-agents/agents/* ~/.claude/agents/

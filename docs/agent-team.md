@@ -30,16 +30,13 @@ Delivers complete solution
 
 Agents hand off work seamlessly:
 
-```yaml
-Laravel Expert: "I've created the API endpoints"
-    → Passes to Frontend Dev: "Here are the endpoints to integrate"
-    
-Frontend Dev: "Building UI components"
-    → Asks API Architect: "Need pagination structure"
-    
-API Architect: "Here's the standard pattern"
-    → Updates Laravel Expert: "Please implement this structure"
-```
+**Backend to Frontend**: "I've created the API endpoints. Here are the endpoints and response formats for you to integrate."
+
+**Frontend to API Architect**: "I'm building the UI components and need guidance on pagination structure."
+
+**API Architect to Backend**: "Here's the standard pagination pattern. Please implement this structure in your endpoints."
+
+This natural communication flow ensures all specialists stay aligned.
 
 ## 🎭 Real Collaboration Examples
 
@@ -92,9 +89,9 @@ Performance Expert:
 
 ```mermaid
 graph TD
-    A[Tech Lead] --> B[Detects Laravel Project]
-    B --> C[Laravel Auth Expert]
-    C --> D[Implements Sanctum]
+    A[Tech Lead] --> B[Detects Project Framework]
+    B --> C[Framework Auth Expert]
+    C --> D[Implements Auth System]
     C --> E[OAuth Specialist]
     E --> F[Social Login Setup]
     D --> G[Frontend Dev]
@@ -165,18 +162,15 @@ Priority Order:
 
 ### Context-Aware Routing
 
-```javascript
-// Tech Lead's decision making
-if (project.hasLaravel() && task.involves('api')) {
-  delegate('laravel-api-architect');
-} else if (task.involves('api')) {
-  delegate('universal-api-architect');
-}
+The Tech Lead makes intelligent routing decisions based on the detected project context:
 
-// With explanation
-"I'm routing this to our Laravel API expert because 
- I detected you're using Laravel 10 with Sanctum"
-```
+**When framework is detected:**
+"I'm routing this API task to our Django specialist because I detected you're using Django 4.x with Django REST Framework."
+
+**When no framework is detected:**
+"I'm routing this to our universal API architect who can work with any technology stack."
+
+This ensures tasks always go to the most appropriate specialist.
 
 ### Expertise Matching
 
@@ -255,7 +249,7 @@ When agents have different approaches:
 "Build user management"
 
 # Or be specific
-"Use the Laravel expert to build user management"
+"Use the backend expert to build user management"
 ```
 
 ### Override Decisions
@@ -275,8 +269,8 @@ Tech Lead: "Switching to GraphQL approach..."
 
 Agent: "I chose Repository pattern because:
 - Your project already uses it
-- It provides better testability
-- Laravel best practice for your use case"
+- It provides better testability  
+- It's a best practice for your framework and use case"
 ```
 
 ## 🌟 The Magic

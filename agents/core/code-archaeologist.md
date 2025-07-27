@@ -32,7 +32,7 @@ description: |
   Delegations:
   - <delegation>
     Trigger: Documentation needed after analysis
-    Target: documentation-writer
+    Target: documentation-specialist
     Handoff: "Codebase analysis complete. Key findings: [structure, patterns, issues]"
   </delegation>
   - <delegation>
@@ -200,7 +200,7 @@ My analysis provides:
 
 ### Documentation Creation
 - **Trigger**: Analysis complete, documentation needed
-- **Target Agent**: documentation-writer
+- **Target Agent**: documentation-specialist
 - **Context**: Full analysis results, key findings, recommended structure
 
 ### Security Assessment

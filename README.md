@@ -104,12 +104,13 @@ Your AI development team is ready!
 - **[API Architect](agents/universal/api-architect.md)** - RESTful and GraphQL design
 - **[Tailwind CSS Expert](agents/universal/tailwind-css-expert.md)** - Pixel-perfect responsive designs
 
-### 🔧 Core Team (3 agents)
+### 🔧 Core Team (4 agents)
 - **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores and documents any codebase
 - **[Code Reviewer](agents/core/code-reviewer.md)** - Ensures quality and best practices
 - **[Performance Optimizer](agents/core/performance-optimizer.md)** - Makes everything blazing fast
+- **[Documentation Specialist](agents/core/documentation-specialist.md)** - Creates clear, comprehensive documentation
 
-**Total: 25 specialized agents** working together to build your projects!
+**Total: 26 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 

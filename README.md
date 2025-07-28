@@ -233,6 +233,6 @@ MIT License - Use freely in your projects!
 
 <p align="center">
   <a href="https://github.com/vijaythecoder/awesome-claude-agents">GitHub</a> •
-  <a href="docs/quick-start.md">Documentation</a> •
+  <a href="docs/architecture.md">Documentation</a> •
   <a href="https://github.com/vijaythecoder/awesome-claude-agents/discussions">Community</a>
 </p>

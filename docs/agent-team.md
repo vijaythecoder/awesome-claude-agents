@@ -1,284 +1,163 @@
-# How Agent Teams Collaborate
+# How Agent Coordination Works
 
-Learn how AI agents work together like a real development team to build complete features.
+The main Claude agent coordinates specialized sub-agents through sequential delegation. Sub-agents work in isolation and return structured findings.
 
-## 🎯 The Team Approach
+## Coordination Reality
 
-Our agents don't work in isolation - they collaborate like a well-coordinated development team. Each agent has specialized skills and knows when to involve others.
+**What Actually Happens:**
+- Main agent invokes tech-lead-orchestrator for routing recommendations
+- Main agent creates task list with TodoWrite
+- Main agent invokes specialists one by one
+- Each specialist returns findings to main agent
+- Main agent passes relevant context between specialists
 
-## 👥 Team Dynamics
+**What Does NOT Happen:**
+- Sub-agents talking to each other
+- Direct collaboration between specialists
+- Parallel execution by sub-agents
 
-### The Tech Lead Role
-
-The Tech Lead Orchestrator acts as your project manager:
+## The Coordination Flow
 
 ```
 User Request
     ↓
-Tech Lead analyzes
+Main Agent invokes tech-lead-orchestrator
     ↓
-Creates execution plan
+Tech-lead returns agent routing map
     ↓
-Assembles right team
+Main Agent creates TodoWrite task list
     ↓
-Coordinates execution
+Main Agent invokes specialists sequentially
     ↓
-Delivers complete solution
+Each specialist returns structured findings
+    ↓
+Main Agent coordinates handoffs
 ```
 
-### Specialist Collaboration
+## Real Example: Building Authentication
 
-Agents hand off work seamlessly:
+**User**: "Add authentication to my app"
 
-**Backend to Frontend**: "I've created the API endpoints. Here are the endpoints and response formats for you to integrate."
-
-**Frontend to API Architect**: "I'm building the UI components and need guidance on pagination structure."
-
-**API Architect to Backend**: "Here's the standard pagination pattern. Please implement this structure in your endpoints."
-
-This natural communication flow ensures all specialists stay aligned.
-
-## 🎭 Real Collaboration Examples
-
-### Example 1: E-commerce Feature
-
-**User**: "Add a shopping cart to my application"
-
-**Tech Lead's Plan**:
+**Step 1: Get Routing**
 ```
-1. Database Expert - Design cart schema
-2. Backend Expert - Implement cart logic
-3. API Architect - Create endpoints
-4. Frontend Dev - Build UI components
-5. Performance Expert - Optimize queries
+Main Agent: "I'll use tech-lead-orchestrator to analyze this request"
+→ Tech-lead returns: Use django-backend-expert, django-api-developer
 ```
 
-**Execution Flow**:
+**Step 2: Create Tasks**
 ```
-Database Expert:
-  ✓ Creates tables: carts, cart_items
-  ✓ Sets up relationships
-  → Hands off to Backend Expert
-
-Backend Expert:
-  ✓ Implements Cart model with methods
-  ✓ Creates CartService for business logic
-  → Requests API design from API Architect
-
-API Architect:
-  ✓ Designs RESTful endpoints
-  ✓ Defines request/response formats
-  → Coordinates with Backend & Frontend
-
-Frontend Developer:
-  ✓ Creates cart components
-  ✓ Implements state management
-  → Asks for optimization
-
-Performance Expert:
-  ✓ Adds eager loading
-  ✓ Implements caching
-  ✓ Creates database indexes
+Main Agent creates TodoWrite:
+1. Use django-backend-expert for auth models
+2. Use django-api-developer for auth endpoints
+3. Use code-reviewer for security audit
 ```
 
-### Example 2: Authentication System
+**Step 3: Sequential Execution**
+```
+Main Agent → django-backend-expert
+Returns: "Created User model, auth middleware. Next specialist needs: Model specifications for API design"
 
-**User**: "I need user authentication with social login"
+Main Agent → django-api-developer (with context from backend expert)
+Returns: "Created login/register endpoints. Next specialist needs: Auth implementation for security review"
 
-**Team Coordination**:
-
-```mermaid
-graph TD
-    A[Tech Lead] --> B[Detects Project Framework]
-    B --> C[Framework Auth Expert]
-    C --> D[Implements Auth System]
-    C --> E[OAuth Specialist]
-    E --> F[Social Login Setup]
-    D --> G[Frontend Dev]
-    G --> H[Login Components]
-    F --> G
-    G --> I[Complete System]
+Main Agent → code-reviewer (with full context)
+Returns: "Security audit complete. Recommendations implemented."
 ```
 
-## 🔄 Communication Patterns
+## Structured Returns
 
-### 1. Sequential Handoff
-```
-Agent A completes task → Agent B continues with output → Agent C finalizes
-```
+Each specialist returns findings in this format:
 
-Example: Database design → Backend implementation → API creation
+```markdown
+## Task Completed: [Task Name]
+- What was accomplished
+- Key decisions made
+- Files created/modified
 
-### 2. Parallel Execution
-```
-         ┌→ Agent B (Backend)
-Agent A →┤
-         └→ Agent C (Frontend)
-```
+## Handoff Information
+- What next specialist needs to know
+- Context from this implementation
+- Specific requirements or constraints
 
-Example: API and UI developed simultaneously
-
-### 3. Consultation Pattern
-```
-Agent A working → needs expertise → consults Agent B → continues work
+## Next Steps
+- Recommended next specialist
+- What should be done next
 ```
 
-Example: Frontend dev needs API structure guidance
+## Context Passing
 
-### 4. Review Pattern
+The main agent extracts and passes relevant information:
+
 ```
-Agent A implements → Agent B reviews → Agent A refines → merge
-```
+Backend Expert returns → Main Agent filters relevant API context → API Developer receives
 
-Example: Code implementation followed by security review
-
-## 📋 Task Decomposition
-
-### How Tech Lead Breaks Down Tasks
-
-**Vague Request**: "Make my app faster"
-
-**Decomposed Tasks**:
-1. Performance Expert: Profile application
-2. Database Expert: Analyze queries
-3. Frontend Dev: Check rendering issues
-4. Backend Expert: Review algorithms
-5. DevOps Expert: Check infrastructure
-
-### Smart Task Ordering
-
-The Tech Lead orders tasks intelligently:
-
-```yaml
-Priority Order:
-1. Dependencies first (database schema)
-2. Core logic next (business rules)
-3. Interfaces after (APIs)
-4. UI last (frontend)
-5. Optimization throughout
+NOT:
+Backend Expert → API Developer (direct communication - impossible)
 ```
 
-## 🎯 Delegation Intelligence
+## Routing Intelligence
 
-### Context-Aware Routing
+Tech-lead-orchestrator provides routing based on:
 
-The Tech Lead makes intelligent routing decisions based on the detected project context:
+1. **Project Analysis**: Framework detection, existing patterns
+2. **Agent Availability**: Which specialists exist for this stack
+3. **Task Requirements**: What expertise is needed
+4. **Execution Order**: Dependencies and logical sequence
 
-**When framework is detected:**
-"I'm routing this API task to our Django specialist because I detected you're using Django 4.x with Django REST Framework."
+Example routing response:
+```
+## Agent Routing Map
+Task 1: Database Design
+- PRIMARY AGENT: django-orm-expert
+- REASON: Django detected, needs Django-specific patterns
 
-**When no framework is detected:**
-"I'm routing this to our universal API architect who can work with any technology stack."
+Task 2: API Implementation  
+- PRIMARY AGENT: django-api-developer
+- REASON: DRF patterns required
 
-This ensures tasks always go to the most appropriate specialist.
+## Available Agents
+- django-orm-expert
+- django-api-developer
+- code-reviewer
 
-### Expertise Matching
-
-| Task Contains | Primary Agent | Supporting Agents |
-|--------------|---------------|-------------------|
-| "authentication" | Auth Expert | Backend, Frontend |
-| "performance" | Performance Optimizer | Database, Backend |
-| "real-time" | WebSocket Expert | Frontend, Backend |
-| "payment" | Payment Specialist | Security, Backend |
-
-## 🔍 Quality Assurance
-
-### Built-in Review Process
-
-Every major implementation goes through:
-
-1. **Implementation**: Specialist creates solution
-2. **Review**: Code Reviewer checks quality
-3. **Security**: Security Guardian validates
-4. **Performance**: Optimizer ensures speed
-5. **Integration**: Tech Lead verifies compatibility
-
-### Continuous Improvement
-
-Agents learn from each other:
-- Share patterns between projects
-- Adopt best practices
-- Improve based on outcomes
-
-## 💡 Advanced Collaboration
-
-### Cross-Stack Coordination
-
-When building features that span the full stack:
-
-```yaml
-Feature: Real-time Dashboard
-
-Coordination Map:
-- Backend: WebSocket server, data aggregation
-- Frontend: Live charts, state management  
-- Database: Efficient queries, indexes
-- DevOps: WebSocket scaling, Redis setup
-- Security: Authentication, rate limiting
+## CRITICAL: Use ONLY these agents
 ```
 
-### Conflict Resolution
+## Why This Architecture?
 
-When agents have different approaches:
+**Technical Limitations:**
+- Sub-agents cannot invoke other sub-agents in Claude Code
+- Each invocation is isolated
+- No shared memory between specialists
 
-1. Tech Lead evaluates options
-2. Considers project context
-3. Makes architectural decision
-4. Ensures consistency
+**Benefits:**
+- Clear coordination responsibility (main agent)
+- Structured information flow
+- Predictable execution order
+- No coordination conflicts
 
-## 🚀 Benefits of Team Approach
+## Main Agent's Job
 
-### For Developers
-- **Complete Solutions**: Not just code snippets
-- **Best Practices**: Multiple experts ensuring quality
-- **Learning**: See how experts collaborate
-- **Speed**: Parallel execution saves time
+The main agent acts as project manager:
 
-### For Projects
-- **Consistency**: Unified architectural decisions
-- **Scalability**: Designed for growth
-- **Maintainability**: Clean, documented code
-- **Reliability**: Multiple reviews catch issues
+1. **Route requests** through tech-lead-orchestrator
+2. **Create task lists** with TodoWrite
+3. **Invoke specialists** in correct order
+4. **Pass context** between invocations
+5. **Coordinate deliverables** into final solution
 
-## 🎮 Controlling the Team
+## What Users See
 
-### Direct Specific Agents
+```
+User: "Build user management system"
 
-```bash
-# Let the team decide
-"Build user management"
+Main Agent: "I'll coordinate the specialists for this feature:
+1. ✓ Using tech-lead for routing analysis
+2. ✓ Using django-backend-expert for models  
+3. ✓ Using django-api-developer for endpoints
+4. ✓ Using code-reviewer for security audit
 
-# Or be specific
-"Use the backend expert to build user management"
+[Each step shows specialist's work and handoff to next]"
 ```
 
-### Override Decisions
-
-```bash
-# Change the approach
-"Actually, let's use GraphQL instead of REST"
-
-# The team adapts
-Tech Lead: "Switching to GraphQL approach..."
-```
-
-### Request Explanations
-
-```bash
-"Why did you choose that pattern?"
-
-Agent: "I chose Repository pattern because:
-- Your project already uses it
-- It provides better testability  
-- It's a best practice for your framework and use case"
-```
-
-## 🌟 The Magic
-
-The real magic happens when agents:
-- Anticipate needs before you ask
-- Suggest improvements proactively  
-- Handle edge cases automatically
-- Coordinate without your input
-
-Just describe what you want to build, and watch your AI team bring it to life!
+The end result feels like team collaboration, but it's actually main agent coordination with structured handoffs.

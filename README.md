@@ -27,6 +27,10 @@ With Agent Team:
 Result: Production-ready implementation tailored to your stack
 ```
 
+## ⚠️ Important Notice
+
+**This project is experimental and token-intensive.** I'm actively testing these agents with Claude Max subscription ($200/month) - expect high token consumption during complex workflows. Use with caution and monitor your usage.
+
 ## 🚀 Quick Start (2 Minutes)
 
 ### 1. Install the Agents

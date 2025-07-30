@@ -1,7 +1,6 @@
 ---
 name: vue-component-architect
-description: |
-  Expert Vue.js architect specializing in Vue 3 Composition API and component patterns. MUST BE USED for Vue component development, composables, or Vue architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.
+description: Expert Vue.js architect specializing in Vue 3 Composition API and component patterns. MUST BE USED for Vue component development, composables, or Vue architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.
 ---
 
 # Vue Component Architect

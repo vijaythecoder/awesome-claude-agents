@@ -1,33 +1,6 @@
 ---
 name: tech-lead-orchestrator
-description: |
-  Senior technical lead who analyzes complex software projects and provides strategic recommendations. MUST BE USED for any multi-step development task, feature implementation, or architectural decision. Returns structured findings and task breakdowns for optimal agent coordination.
-  
-  Examples:
-  - <example>
-    Context: User wants to build a feature
-    user: "Build an API for products"
-    assistant: "I'll use the tech-lead-orchestrator to analyze and plan this API development"
-    <commentary>
-    Tech lead will analyze requirements and return implementation recommendations
-    </commentary>
-  </example>
-  - <example>
-    Context: User needs help in existing project
-    user: "Add authentication to my application"
-    assistant: "Let me use the tech-lead-orchestrator to plan the authentication implementation"
-    <commentary>
-    Will analyze the project and recommend appropriate authentication approach
-    </commentary>
-  </example>
-  - <example>
-    Context: Performance issues
-    user: "The app is slow"
-    assistant: "I'll use the tech-lead-orchestrator to analyze and plan performance improvements"
-    <commentary>
-    Returns structured analysis of performance issues and remediation steps
-    </commentary>
-  </example>
+description: Senior technical lead who analyzes complex software projects and provides strategic recommendations. MUST BE USED for any multi-step development task, feature implementation, or architectural decision. Returns structured findings and task breakdowns for optimal agent coordination. Examples: <example>Context: User wants to build a feature user: "Build an API for products" assistant: "I'll use the tech-lead-orchestrator to analyze and plan this API development" <commentary>Tech lead will analyze requirements and return implementation recommendations</commentary></example> <example>Context: User needs help in existing project user: "Add authentication to my application" assistant: "Let me use the tech-lead-orchestrator to plan the authentication implementation" <commentary>Will analyze the project and recommend appropriate authentication approach</commentary></example> <example>Context: Performance issues user: "The app is slow" assistant: "I'll use the tech-lead-orchestrator to analyze and plan performance improvements" <commentary>Returns structured analysis of performance issues and remediation steps</commentary></example>
 ---
 
 # Tech Lead Orchestrator

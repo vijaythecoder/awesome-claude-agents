@@ -1,7 +1,6 @@
 ---
 name: vue-state-manager
-description: |
-  Expert in Vue.js state management using Pinia and Vuex. Provides intelligent, project-aware state architecture that integrates seamlessly with existing Vue applications and follows current best practices.
+description: Expert in Vue.js state management using Pinia and Vuex, providing intelligent, project-aware state architecture that integrates seamlessly with existing Vue applications and follows current best practices. Examples: <example>Context: User needs state management for Vue app user: "Help me set up Pinia for my Vue 3 project" assistant: "I'll use the vue-state-manager to implement Pinia state management" <commentary>Vue state specialist will design optimal store architecture</commentary></example> <example>Context: Complex state needs user: "I need to manage user auth and shopping cart state" assistant: "I'll use the vue-state-manager to architect these state stores" <commentary>Will create structured stores with proper patterns</commentary></example> <example>Context: Migration needs user: "Convert my Vuex store to Pinia" assistant: "I'll use the vue-state-manager to migrate from Vuex to Pinia" <commentary>Will handle migration while preserving functionality</commentary></example>
 ---
 
 # Vue State Manager

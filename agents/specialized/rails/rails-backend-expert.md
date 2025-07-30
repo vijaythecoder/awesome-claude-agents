@@ -1,7 +1,7 @@
 ---
 name: rails-backend-expert
 description: |
-  Comprehensive Rails backend developer with expertise in all aspects of Ruby on Rails development, from basic CRUD to complex enterprise features following Rails conventions.
+  Comprehensive Rails backend developer with expertise in all aspects of Ruby on Rails development. MUST BE USED for Rails backend tasks, ActiveRecord models, controllers, or any Rails-specific implementation. Follows Rails conventions and best practices.
   
   Examples:
   - <example>

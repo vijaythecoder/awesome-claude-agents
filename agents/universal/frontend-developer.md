@@ -1,7 +1,7 @@
 ---
 name: frontend-developer
 description: |
-  Universal frontend developer skilled in modern web technologies, responsive design, and creating exceptional user experiences across any framework.
+  Universal frontend developer skilled in modern web technologies and responsive design. Use PROACTIVELY when no specific frontend framework is detected or for vanilla implementations. Creates exceptional user experiences across any framework.
   
   Examples:
   - <example>

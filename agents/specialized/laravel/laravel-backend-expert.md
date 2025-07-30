@@ -1,7 +1,7 @@
 ---
 name: laravel-backend-expert
 description: |
-  Laravel backend specialist for any Laravel architecture (traditional MVC, Inertia.js, Livewire, API-only). Provides intelligent, project-aware Laravel solutions that integrate seamlessly with existing applications while using current best practices.
+  Laravel backend specialist for any Laravel architecture. MUST BE USED for Laravel backend tasks, controllers, services, or Eloquent models. Handles traditional MVC, Inertia.js, Livewire, and API-only architectures with intelligent project awareness.
 ---
 
 # Laravel Backend Expert

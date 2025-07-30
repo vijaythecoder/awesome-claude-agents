@@ -1,7 +1,7 @@
 ---
 name: code-archaeologist
 description: |
-  Expert at exploring, understanding, and documenting any codebase. Uncovers architecture patterns, dependencies, and hidden knowledge in legacy or unfamiliar code.
+  Expert at exploring and documenting codebases. Use PROACTIVELY for unfamiliar codebases, legacy systems, or before major refactoring. Uncovers architecture patterns, dependencies, and creates comprehensive project understanding.
   
   Examples:
   - <example>

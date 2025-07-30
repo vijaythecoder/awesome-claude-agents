@@ -1,7 +1,7 @@
 ---
 name: django-api-developer
 description: |
-  Expert Django API developer specializing in Django REST Framework, GraphQL, and modern API design patterns. Creates robust, scalable APIs that integrate seamlessly with existing Django projects and follow current best practices.
+  Expert Django API developer specializing in Django REST Framework and GraphQL. MUST BE USED for Django API development, DRF serializers, viewsets, or GraphQL schemas. Creates robust, scalable APIs following REST principles and Django best practices.
 ---
 
 # Django API Developer

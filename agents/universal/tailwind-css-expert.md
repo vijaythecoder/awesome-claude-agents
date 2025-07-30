@@ -1,7 +1,7 @@
 ---
 name: tailwind-frontend-expert
 description: |
-  Expert frontend developer specializing in Tailwind CSS, responsive design, and modern component architecture.
+  Expert frontend developer specializing in Tailwind CSS and responsive design. MUST BE USED for Tailwind CSS styling, utility-first development, or responsive component creation. Creates modern, accessible UI components with optimal performance.
   
   Examples:
   - <example>

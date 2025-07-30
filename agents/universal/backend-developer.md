@@ -1,7 +1,7 @@
 ---
 name: backend-developer
 description: |
-  Universal backend developer with expertise across multiple languages and frameworks. Implements robust server-side solutions using best practices for any technology stack.
+  Universal backend developer with expertise across multiple languages and frameworks. Use PROACTIVELY when no specific framework is detected or for polyglot implementations. Implements robust server-side solutions using best practices for any technology stack.
   
   Examples:
   - <example>

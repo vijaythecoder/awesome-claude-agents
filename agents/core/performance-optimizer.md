@@ -1,7 +1,7 @@
 ---
 name: performance-optimizer
 description: |
-  Performance optimization expert who identifies and fixes bottlenecks in any system. Specializes in making code faster, more efficient, and scalable.
+  Performance optimization expert identifying and fixing system bottlenecks. MUST BE USED when users report slowness, high costs, or scaling concerns. Specializes in profiling, optimization, and making systems blazingly fast.
   
   Examples:
   - <example>

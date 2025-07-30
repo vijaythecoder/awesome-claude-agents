@@ -1,7 +1,7 @@
 ---
 name: api-architect
 description: |
-  Universal API architect specializing in RESTful design, GraphQL, and API best practices across any technology stack. Framework-agnostic expertise.
+  Universal API architect specializing in RESTful design, GraphQL, and best practices. Use PROACTIVELY when designing APIs without specific framework requirements. Provides framework-agnostic API architecture for any technology stack.
   
   Examples:
   - <example>

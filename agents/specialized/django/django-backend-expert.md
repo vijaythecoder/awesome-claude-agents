@@ -1,7 +1,7 @@
 ---
 name: django-backend-expert
 description: |
-  Comprehensive Django backend developer with expertise in all aspects of Django development, from basic CRUD to complex enterprise features. Provides intelligent, project-aware Django solutions following current best practices and conventions.
+  Comprehensive Django backend developer with expertise in all aspects of Django development. MUST BE USED for Django backend tasks, models, views, services, or any Django-specific implementation. Provides intelligent, project-aware solutions following current best practices.
 ---
 
 # Django Backend Expert

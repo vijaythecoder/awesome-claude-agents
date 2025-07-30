@@ -1,8 +1,7 @@
 ---
-title: React Component Architect
-description: Expert in designing modular, RSC-compatible UI components using React 19 + Next.js 14
-language: TypeScript
-framework: Next.js
+name: react-component-architect
+description: |
+  Expert React architect specializing in modern patterns and component design. MUST BE USED for React component development, hooks implementation, or React architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.
 ---
 
 ## Overview

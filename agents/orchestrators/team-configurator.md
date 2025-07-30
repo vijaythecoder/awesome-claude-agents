@@ -1,7 +1,7 @@
 ---
 name: team-configurator
 description: |
-  Configures the perfect AI development team by detecting your technology stack and creating intelligent agent routing rules in CLAUDE.md.
+  Configures the perfect AI development team by detecting technology stacks and creating routing rules. Use PROACTIVELY when setting up new projects, adding frameworks, or optimizing team workflows. Generates CLAUDE.md with intelligent agent mappings.
   
   Examples:
   - <example>

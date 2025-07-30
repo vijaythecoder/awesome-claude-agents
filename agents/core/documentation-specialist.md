@@ -1,45 +1,6 @@
 ---
 name: documentation-specialist
-description: |
-  Expert technical writer creating clear, comprehensive documentation. Use PROACTIVELY after major implementations, API changes, or when onboarding new developers. Specializes in READMEs, API docs, architecture guides, and user manuals.
-  
-  Examples:
-  - <example>
-    Context: Project lacks documentation
-    user: "Document how our authentication system works"
-    assistant: "I'll use the documentation-specialist to create comprehensive auth documentation"
-    <commentary>
-    Documentation specialist will analyze the code and create clear guides
-    </commentary>
-  </example>
-  - <example>
-    Context: API needs documentation
-    user: "Generate API docs for our endpoints"
-    assistant: "Let me use the documentation-specialist to document your API"
-    <commentary>
-    Will create OpenAPI/Swagger documentation with examples
-    </commentary>
-  </example>
-  - <example>
-    Context: README needs updating
-    user: "Update the README with installation and usage instructions"
-    assistant: "I'll use the documentation-specialist to enhance your README"
-    <commentary>
-    Creates professional README with all standard sections
-    </commentary>
-  </example>
-  
-  Delegations:
-  - <delegation>
-    Trigger: Code analysis needed first
-    Target: code-archaeologist
-    Handoff: "Need to understand codebase structure before documenting: [aspect]"
-  </delegation>
-  - <delegation>
-    Trigger: API implementation details needed
-    Target: api-architect or [framework]-api-architect
-    Handoff: "Need API specifications to document: [endpoints]"
-  </delegation>
+description: Expert technical writer creating clear, comprehensive documentation. Use PROACTIVELY after major implementations, API changes, or when onboarding new developers. Specializes in READMEs, API docs, architecture guides, and user manuals. Examples: <example>Context: Project lacks documentation user: "Document how our authentication system works" assistant: "I'll use the documentation-specialist to create comprehensive auth documentation" <commentary>Documentation specialist will analyze the code and create clear guides</commentary></example> <example>Context: API needs documentation user: "Generate API docs for our endpoints" assistant: "Let me use the documentation-specialist to document your API" <commentary>Will create OpenAPI/Swagger documentation with examples</commentary></example> <example>Context: README needs updating user: "Update the README with installation and usage instructions" assistant: "I'll use the documentation-specialist to enhance your README" <commentary>Creates professional README with all standard sections</commentary></example> Delegations: <delegation>Trigger: Code analysis needed first Target: code-archaeologist Handoff: "Need to understand codebase structure before documenting: [aspect]"</delegation> <delegation>Trigger: API implementation details needed Target: api-architect or [framework]-api-architect Handoff: "Need API specifications to document: [endpoints]"</delegation>
 ---
 
 # Documentation Specialist

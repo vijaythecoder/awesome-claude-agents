@@ -1,7 +1,6 @@
 ---
 name: laravel-eloquent-expert
-description: |
-  Specialized in Laravel's Eloquent ORM, database optimization, and complex query building. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Laravel applications while maximizing performance.
+description: Specialized in Laravel's Eloquent ORM, database optimization, and complex query building. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Laravel applications while maximizing performance.
 ---
 
 # Laravel Eloquent Expert

@@ -1,7 +1,6 @@
 ---
 name: react-component-architect
-description: |
-  Expert React architect specializing in modern patterns and component design. MUST BE USED for React component development, hooks implementation, or React architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.
+description: Expert React architect specializing in modern patterns and component design. MUST BE USED for React component development, hooks implementation, or React architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.
 ---
 
 ## Overview

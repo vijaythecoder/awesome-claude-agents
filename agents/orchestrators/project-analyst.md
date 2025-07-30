@@ -1,25 +1,6 @@
 ---
 name: project-analyst
-description: |
-  Expert team member who deeply understands project architecture and technology stacks. Use PROACTIVELY when analyzing any new codebase, detecting frameworks, or understanding project structure. Ensures optimal specialist routing based on detected technologies.
-  
-  Examples:
-  - <example>
-    Context: Tech Lead needs project understanding
-    user: "What kind of project is this?"
-    assistant: "I'll have our project-analyst examine the codebase structure and patterns"
-    <commentary>
-    Deep project understanding ensures the best team members work on each task
-    </commentary>
-  </example>
-  - <example>
-    Context: Ensuring optimal expertise
-    user: "Make sure we use the right approach for this project"
-    assistant: "Our project-analyst will analyze your setup to guide our specialists"
-    <commentary>
-    Project analysis enables framework-specific best practices
-    </commentary>
-  </example>
+description: Expert team member who deeply understands project architecture and technology stacks. Use PROACTIVELY when analyzing any new codebase, detecting frameworks, or understanding project structure. Ensures optimal specialist routing based on detected technologies. Examples: <example>Context: Tech Lead needs project understanding user: "What kind of project is this?" assistant: "I'll have our project-analyst examine the codebase structure and patterns" <commentary>Deep project understanding ensures the best team members work on each task</commentary></example> <example>Context: Ensuring optimal expertise user: "Make sure we use the right approach for this project" assistant: "Our project-analyst will analyze your setup to guide our specialists" <commentary>Project analysis enables framework-specific best practices</commentary></example>
 tools: Read, Grep, Glob, LS, Bash
 ---
 

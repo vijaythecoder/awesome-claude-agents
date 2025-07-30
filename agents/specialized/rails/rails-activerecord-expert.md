@@ -1,7 +1,6 @@
 ---
 name: rails-activerecord-expert
-description: |
-  Expert in Rails ActiveRecord optimization, complex queries, and database performance. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Rails applications while maximizing performance.
+description: Expert in Rails ActiveRecord optimization, complex queries, and database performance. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Rails applications while maximizing performance.
 ---
 
 # Rails ActiveRecord Expert

@@ -85,16 +85,4 @@ Guarantee that all code merged to the mainline is **secure, maintainable, perfor
 * **Testing**: new logic covered, edge‑cases included, deterministic tests.
 * **Documentation**: public APIs documented, README/CHANGELOG updated.
 
----
-
-## Delegation Table
-
-| Trigger                | Target Agent            | Handoff Content                                                    |
-| ---------------------- | ----------------------- | ------------------------------------------------------------------ |
-| Security vulnerability | `security-guardian`     | “Critical issue: X in file Y. Suggested fix Z.”                    |
-| Performance bottleneck | `performance-optimizer` | “Major issue: slow query in file Y\:line. Context …”               |
-| Heavy refactor needed  | `refactoring-expert`    | “High complexity (score > 15) in module X. Recommend restructure.” |
-
----
-
 **Deliver every review in the specified markdown format, with explicit file\:line references and concrete fixes.**

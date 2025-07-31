@@ -50,19 +50,19 @@ claude "use @agent-team-configurator and optimize my project to best use the ava
 
 ### 4. Start Building
 ```bash
-claude "use @tech-lead-orchestrator and build a user authentication system"
+claude "use @agent-tech-lead-orchestrator and build a user authentication system"
 ```
 
 Your AI team will automatically detect your stack and use the right specialists!
 
 ## 🎯 How Auto-Configuration Works
 
-The team-configurator agent automatically sets up your perfect AI development team. When invoked, it:
+The @agent-team-configurator automatically sets up your perfect AI development team. When invoked, it:
 
 1. **Locates CLAUDE.md** - Finds existing project configuration and preserves all your custom content outside the "AI Team Configuration" section
 2. **Detects Technology Stack** - Inspects package.json, composer.json, requirements.txt, go.mod, Gemfile, and build configs to understand your project
 3. **Discovers Available Agents** - Scans ~/.claude/agents/ and .claude/ folders, building a capability table of all available specialists
-4. **Selects Specialists** - Prefers framework-specific agents over universal ones, always includes code-reviewer and performance-optimizer for quality assurance
+4. **Selects Specialists** - Prefers framework-specific agents over universal ones, always includes @agent-code-reviewer and @agent-performance-optimizer for quality assurance
 5. **Updates CLAUDE.md** - Creates a timestamped "AI Team Configuration" section with your detected stack and a Task|Agent|Notes mapping table
 6. **Provides Usage Guidance** - Shows you the detected stack, selected agents, and gives sample commands to start building
 
@@ -127,9 +127,7 @@ The team-configurator agent automatically sets up your perfect AI development te
 
 ## 📚 Learn More
 
-- [How Agent Teams Collaborate](docs/agent-team.md) - See the magic behind team coordination
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
-- [Architecture Guide](docs/architecture.md) - Technical deep dive
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
 
 ## 💬 Join The Community
@@ -155,6 +153,6 @@ MIT License - Use freely in your projects!
 
 <p align="center">
   <a href="https://github.com/vijaythecoder/awesome-claude-agents">GitHub</a> •
-  <a href="docs/architecture.md">Documentation</a> •
+  <a href="docs/creating-agents.md">Documentation</a> •
   <a href="https://github.com/vijaythecoder/awesome-claude-agents/discussions">Community</a>
 </p>

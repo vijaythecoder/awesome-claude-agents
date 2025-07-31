@@ -1,190 +1,164 @@
-# Best Practices for Claude Agents
+# Crafting High‑Impact Claude Code Sub‑Agents
 
-Essential guidelines for creating effective, interconnected agents.
+> **Goal –** Establish a repeatable playbook for designing small, focused “sub‑agents” that Claude can invoke automatically or on‑demand. Follow these practices to get predictable routing, strong task performance, and a maintainable agent library.
 
-## Core Principles
+---
 
-### 1. Single Responsibility
-Each agent should master ONE domain.
+## 1. File & Folder Conventions
 
-✅ `tailwind-frontend-expert` - Just Tailwind CSS  
-❌ `full-stack-developer` - Too broad
+| Element            | Location              | Rationale                        |
+| ------------------ | --------------------- | -------------------------------- |
+| **Project agents** | `.claude/agents/`     | Highest precedence inside a repo |
+| **User agents**    | `~/.claude/agents/`   | Global across projects           |
+| **Filename**       | `kebab-case.md`       | Mirrors the `name` field         |
+| **VCS**            | Commit project agents | Allows PR‑style reviews          |
 
-### 2. XML-Style Examples
-Use Claude's pattern for smart invocation:
+*Clash rule:* a project‑level agent overrides a user‑level one with the same **name**.
 
-```yaml
-description: |
-  Expert API developer for any technology stack.
-  
-  Examples:
-  - <example>
-    Context: User needs an API
-    user: "Create a REST API"  
-    assistant: "I'll use the api-architect to design the endpoints"
-    <commentary>
-    API design is this agent's specialty
-    </commentary>
-  </example>
-```
+---
 
-### 3. Delegation Awareness
-Agents should know their limits:
-
-```markdown
-## Delegation Patterns
-When I need:
-- Frontend work → tailwind-frontend-expert
-- Security review → security-auditor
-- Database optimization → database-architect
-```
-
-## Writing Effective Descriptions
-
-### Include Multiple Examples
-Cover different scenarios:
-1. Common use case
-2. Edge case  
-3. Delegation scenario
-
-### Add Commentary
-Explain WHY the agent was chosen - this trains the pattern matching.
-
-### Specify Delegations
-Show how agents work together:
+## 2. Mandatory Front‑Matter
 
 ```yaml
-Delegations:
-- <delegation>
-  Trigger: Frontend needed
-  Target: frontend-expert
-  Handoff: "API ready at /api/users"
-</delegation>
+---
+name: unique-agent-name          # Lowercase & hyphens only
+description: MUST BE USED …      # Natural‑language trigger phrase
+tools: LS, Read, Grep            # Omit to inherit every tool
+---
 ```
 
-## System Prompt Best Practices
+* **`name`** – unique, intent‑revealing.
+* **`description`** – write **when** and **why** the agent should run; include “**MUST BE USED**” or “**use PROACTIVELY**” to prompt auto‑delegation.
+* **`tools`** – whitelist only what’s essential; tighter scope = safer & faster.
 
-### Clear Structure
-```markdown
-# Expert Title
+---
 
-You are [role] with [experience].
+## 3. System‑Prompt Blueprint
 
-## Core Expertise
-- Specific skills
+The body of the file (below the front‑matter) is the agent’s **system prompt**. Structure it like a micro‑spec:
 
-## Task Approach  
-1. How you work
+1. **Mission / Role** – one sentence that nails the outcome.
+2. **Workflow** – numbered steps Claude should always follow.
+3. **Output Contract** – exact Markdown or JSON Claude must return.
+4. **Heuristics & Checks** – bullet list of edge‑cases, validations, scoring rubrics.
+5. *(Optional)* **Delegation cues** – “If X is detected, ask `<other‑agent>`.”
 
-## Delegation Patterns
-When to hand off
-```
+Keep it short but explicit; the prompt is re‑parsed every invocation.
 
-### Concrete Examples
-Show, don't just tell:
+---
 
-```php
-// Good: Specific example in any language
-// JavaScript/Express
-app.get('/api/users', async (req, res) => {
-  const users = await User.findAll({ 
-    include: ['roles'],
-    limit: 20 
-  });
-  res.json(users);
-});
+## 4. Separate Router & Expert Logic
 
-// Bad: Vague description
-"Follow best practices"
-```
+| Layer             | Audience             | Key phrases                                |
+| ----------------- | -------------------- | ------------------------------------------ |
+| **`description`** | Claude’s router      | “MUST BE USED…”, “use PROACTIVELY when…”   |
+| **Prompt body**   | The sub‑agent itself | “You are an expert… Follow this workflow…” |
 
-## Interconnection Strategies
+Never mix behavioural instructions meant for the agent into the `description` block.
 
-### 1. Context Passing
-Pass rich information:
+---
 
-```json
-{
-  "from": "backend-developer",
-  "to": "frontend-developer",
-  "context": {
-    "endpoints": ["/api/users"],
-    "auth": "Bearer token"
-  }
-}
-```
+## 5. Granularity & Single Responsibility
 
-### 2. Clear Handoff Points
-Define when to delegate:
-- Task complete → next phase
-- Outside expertise → specialist
-- Review needed → auditor
+* One agent = one domain of expertise (`code-reviewer`, `api-architect`).
+* Avoid “mega‑agents”; smaller prompts stay in‑context and converge faster.
+* Chain work via delegation rather than bloating a single prompt.
 
-### 3. Orchestration
-Use orchestrator agents for complex workflows:
-- Break down requirements
-- Coordinate specialists
-- Track progress
+---
 
-## Testing Your Agents
+## 6. Tool‑Granting Strategy
 
-### 1. Invocation Testing
+| Scenario                          | Recommended `tools` field                  |
+| --------------------------------- | ------------------------------------------ |
+| Broad prototyping                 | *(omit `tools`)* – inherit all             |
+| Security‑sensitive                | Enumerate minimal set (e.g., `Read, Grep`) |
+| Dangerous commands (e.g., `Bash`) | Grant only to trusted, well‑scoped agents  |
+
+Explicit descriptions generally out‑perform code examples for guiding tool use.
+
+---
+
+## 7. Trigger Phrases for Auto‑Delegation
+
+Claude scans conversations for cues that match the `description`. Embed action words to raise recall:
+
+* review · analyze · optimize
+* security audit · performance bottleneck
+* generate docs · configure team
+
+---
+
+## 8. Testing an Agent
+
+1. **Unit Test** – invoke the agent directly:
+
+   ```
+   > Use @agent-code-reviewer to check src/auth.js
+   ```
+2. **Context Test** – pose a natural request and confirm the router selects the agent automatically.
+3. **Regression** – snapshot outputs and assert adherence to the declared schema.
+
+---
+
+## 9. Iteration Workflow
+
 ```bash
-# Should trigger
-"Build a responsive navbar"
-
-# Should NOT trigger  
-"Create a Python script"
+/agents            # interactive editor
+e                  # open file in external editor
+git add .claude/agents/*
+git commit -m "tune(api-architect): clarify versioning strategy"
 ```
 
-### 2. Delegation Testing
-Verify handoffs work correctly.
+Iterate in small commits; pair with a `code-reviewer` agent for meta‑feedback.
 
-### 3. Integration Testing
-Test complete workflows end-to-end.
+---
 
-## Common Mistakes
+## 10. Style Checklist
 
-### 1. Over-Engineering
-Keep agents focused and simple.
+* ✅ Active voice, imperative verbs
+* ✅ Lower‑case utility names (`code-reviewer`, not `CodeReviewer`)
+* ✅ **No external links** inside prompts (keep docs offline)
+* ✅ Markdown headings ≤ `###` inside prompt for readability
+* ✅ Wrap code fences with language tags for syntax highlighting
 
-### 2. Missing Examples
-Examples are crucial for pattern matching.
+---
 
-### 3. No Delegation Info
-Isolated agents limit capability.
+## Quick‑Start Template
 
-### 4. Too Many Tools
-Only request necessary tools:
+````md
+---
+name: <agent-name>
+description: MUST BE USED to <do X> whenever <condition>. Use PROACTIVELY before <event>.
+tools: <tool1>, <tool2>
+---
 
-```yaml
-# Good: Specific tools
-tools: Read, Write, Edit, Bash
+# <Title> – <Concise Role Tagline>
 
-# Bad: Everything
-tools: # Inherits all (usually too much)
+## Mission
+One sentence.
+
+## Workflow
+1. …
+2. …
+3. …
+
+## Output Format
+```markdown
+## Section
+- field: value
+````
+
+## Heuristics
+
+* Bullet
+* Bullet
+
 ```
 
-## Optimization Tips
+Copy, fill, iterate – and your sub‑agents will perform reliably while keeping the main Claude context lean and focused.
 
-### 1. Use Orchestrators
-For complex multi-step tasks.
+---
 
-### 2. Parallel Execution
-Some agents can work simultaneously.
+**Remember:** crystal‑clear descriptions guide the router; crystal‑clear prompts guide the specialist. Do both, and your agent library becomes a super‑power.
 
-### 3. Context Preservation  
-Pass information forward efficiently.
-
-### 4. Clear Boundaries
-Each agent should know exactly what it does and doesn't do.
-
-## Summary
-
-The best agents are:
-- **Focused** - One domain, deep expertise
-- **Connected** - Know when to delegate
-- **Smart** - Use XML examples for intelligent invocation
-- **Clear** - Well-documented with examples
-
-Build agents that work together like a real development team!
+```

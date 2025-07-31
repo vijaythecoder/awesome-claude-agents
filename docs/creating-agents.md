@@ -32,8 +32,8 @@ You are an expert [role] specializing in [domain].
 1. [How you handle tasks]
 2. [Your methodology]
 
-## Delegation Patterns
-When I encounter [type of task], I delegate to [agent-name].
+## Return Format
+Provide clear, structured output that other agents can understand.
 ```
 
 ## The XML-Style Pattern (Advanced)
@@ -48,7 +48,7 @@ description: |
   - <example>
     Context: User needs to build an API
     user: "Create a REST API for products"
-    assistant: "I'll use the backend-developer to build a comprehensive products API"
+    assistant: "I'll use @agent-backend-developer to build a comprehensive products API"
     <commentary>
     API development is a core backend task
     </commentary>
@@ -56,7 +56,7 @@ description: |
   - <example>
     Context: User has completed backend and needs frontend
     user: "Now I need a UI for this API"
-    assistant: "The backend is complete. Let me hand this off to the tailwind-frontend-expert"
+    assistant: "The backend is complete. Let me hand this off to @agent-tailwind-frontend-expert"
     <commentary>
     Recognizing when to delegate to frontend specialist
     </commentary>
@@ -70,35 +70,13 @@ description: |
 3. **Smart Delegation**: Knows when to hand off to other specialists
 4. **Self-Documenting**: Examples serve as live documentation
 
-## Agent Interconnection
+## Agent Integration
 
-### Basic Delegation
+Agents work together through the main Claude agent coordination. Focus on:
 
-Add delegation patterns to your system prompt:
-
-```markdown
-## Delegation Patterns
-
-When tasks require expertise outside my domain:
-- Frontend UI needed → tailwind-frontend-expert
-- Security review → security-auditor  
-- Database optimization → database-architect
-
-I will complete my portion and suggest the appropriate specialist.
-```
-
-### Advanced Orchestration
-
-For complex workflows, use delegation examples:
-
-```yaml
-Delegations:
-- <delegation>
-  Trigger: Frontend implementation needed
-  Handoff: "Backend API complete at /api/products. Handing off to frontend expert."
-  Context: { endpoints: ["/api/products", "/api/products/{id}"], auth: "Bearer token" }
-</delegation>
-```
+- **Clear Output**: Provide structured results that can be used by other agents
+- **Next Steps**: Suggest what should happen next in your response
+- **Context Passing**: Include relevant information for follow-up work
 
 ## Tool Configuration
 
@@ -147,36 +125,36 @@ tools: Read, Grep, Glob, Bash  # Read-only tools for safety
 - Include edge cases
 - Show when NOT to use this agent
 
-### 3. Delegation Awareness
-- Know your limits
+### 3. Clear Output
+- Provide structured results
 - Identify next steps
-- Pass context forward
+- Include relevant context
 
 ## Testing Your Agent
 
 1. **Invocation Test**: Does it trigger on appropriate requests?
-2. **Delegation Test**: Does it hand off correctly?
+2. **Output Test**: Does it provide clear, structured results?
 3. **Quality Test**: Is the output expert-level?
 
 ## Common Patterns
 
 ### Backend → Frontend Flow
 ```
-Backend Expert → API Complete → Frontend Expert → UI Built → Code Reviewer
+@agent-backend-developer → API Complete → @agent-frontend-developer → UI Built → @agent-code-reviewer
 ```
 
 ### Full Stack Development
 ```
-Project Orchestrator → Backend Expert + Frontend Expert → Integration → Testing
+@agent-tech-lead-orchestrator → @agent-backend-developer + @agent-frontend-developer → Integration → Testing
 ```
 
 ### Review Pipeline
 ```
-Developer Agent → Code Complete → Security Auditor → Deployment Expert
+@agent-backend-developer → Code Complete → @agent-code-reviewer → @agent-performance-optimizer
 ```
 
 ## Next Steps
 
-- See [Interconnected Agents](interconnected-agents.md) for advanced workflows
-- Check [examples/](../examples/) for real agent implementations
-- Use [templates/agent-template.md](../templates/agent-template.md) as starting point
+- Browse existing agents in [agents/](../agents/) for implementation examples
+- Check [best-practices.md](best-practices.md) for optimization tips
+- Start with the agent YAML template shown above

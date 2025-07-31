@@ -2,192 +2,114 @@
 
 **Supercharge Claude Code with a team of specialized AI agents** that work together to build complete features, debug complex issues, and handle any technology stack with expert-level knowledge.
 
-## 🎯 The Problem & Solution
-
-While Claude Code is powerful, complex projects need specialized expertise. Generic AI responses often miss best practices, leading to suboptimal code.
-
-**Our solution:** A team of specialized AI agents that work together, each with deep expertise in their domain. Just like a real development team, but available 24/7.
-
-## 💡 See The Difference
-
-```
-You: "Build user management"
-
-Without Agent Team:
-Claude: *Generic authentication implementation*
-
-With Agent Team:
-├── Tech Lead: "I'll coordinate this complex feature for your project"
-├── Project Analyst: "Detected Django + React stack, assembling specialists"
-├── Backend Expert: "Implementing authentication with Django patterns"
-├── API Architect: "Designing RESTful resources with validation"
-├── Frontend Dev: "Building React components with modern patterns"
-└── Database Expert: "Optimizing queries and relationships"
-
-Result: Production-ready implementation tailored to your stack
-```
-
 ## ⚠️ Important Notice
 
-**This project is experimental and token-intensive.** I'm actively testing these agents with Claude Max subscription ($200/month) - expect high token consumption during complex workflows. Use with caution and monitor your usage.
+**This project is experimental and token-intensive.** I'm actively testing these agents with Claude subscription - expect high token consumption during complex workflows. Multi-agent orchestration can consume 10-50k tokens per complex feature. Use with caution and monitor your usage.
 
-## 🚀 Quick Start (2 Minutes)
+## 🚀 Quick Start (3 Minutes)
+
+### Prerequisites
+- **Claude Code CLI** installed and authenticated
+- **Claude subscription** - required for intensive agent workflows
+- Active project directory with your codebase
 
 ### 1. Install the Agents
 ```bash
 git clone https://github.com/vijaythecoder/awesome-claude-agents.git
-cp -r awesome-claude-agents/agents ~/.claude/
 ```
 
-### 2. Configure for Your Project
-Navigate to your project directory and run:
+#### Option A: Symlink (Recommended - auto-updates)
+
+**macOS/Linux:**
+```bash
+ln -sf "$(pwd)/awesome-claude-agents" ~/.claude/awesome-claude-agents
+```
+
+**Windows (PowerShell):**
+```powershell
+cmd /c mklink /D "$env:USERPROFILE\.claude\awesome-claude-agents" "$(Get-Location)\awesome-claude-agents"
+```
+
+#### Option B: Copy (Static - no auto-updates)
+```bash
+cp -r awesome-claude-agents ~/.claude/
+```
+
+### 2. Verify Installation
+```bash
+claude /agents
+# Should show all 24 agents.
+```
+
+### 3. Initialize Your Project
+**Navigate** to your **project directory** and run the following command to configure your AI team:
 
 ```bash
-claude "Use team-configurator to set up my AI development team"
+claude "use @agent-team-configurator and optimize my project to best use the available subagents."
 ```
 
-### 3. Start Building
+### 4. Start Building
 ```bash
-claude "Build a complete user authentication system"
+claude "use @agent-tech-lead-orchestrator and build a user authentication system"
 ```
 
-Your AI team will automatically use the right specialists for your tech stack!
+Your AI team will automatically detect your stack and use the right specialists!
 
 ## 🎯 How Auto-Configuration Works
 
-The team-configurator agent is your AI team setup expert. When invoked, it:
+The @agent-team-configurator automatically sets up your perfect AI development team. When invoked, it:
 
-1. **Checks Existing Setup** - Looks for CLAUDE.md and preserves your customizations
-2. **Analyzes Your Stack** - Uses project-analyst to detect frameworks and patterns
-3. **Scans Available Agents** - Discovers all agents in ~/.claude/agents/
-4. **Creates Smart Mappings** - Routes tasks to the perfect specialist
-5. **Updates CLAUDE.md** - Saves configuration without removing existing content
+1. **Locates CLAUDE.md** - Finds existing project configuration and preserves all your custom content outside the "AI Team Configuration" section
+2. **Detects Technology Stack** - Inspects package.json, composer.json, requirements.txt, go.mod, Gemfile, and build configs to understand your project
+3. **Discovers Available Agents** - Scans ~/.claude/agents/ and .claude/ folders, building a capability table of all available specialists
+4. **Selects Specialists** - Prefers framework-specific agents over universal ones, always includes @agent-code-reviewer and @agent-performance-optimizer for quality assurance
+5. **Updates CLAUDE.md** - Creates a timestamped "AI Team Configuration" section with your detected stack and a Task|Agent|Notes mapping table
+6. **Provides Usage Guidance** - Shows you the detected stack, selected agents, and gives sample commands to start building
 
-### Three-Phase Orchestration
-
-Your Tech Lead coordinates work through:
-- **Research Phase** - Multiple specialists gather information in parallel
-- **Planning Phase** - Creates tasks with TodoWrite, identifying dependencies
-- **Execution Phase** - Agents work together, sharing context efficiently
-
-Example output for a Django + React project:
-```markdown
-✅ Project Optimization Complete!
-
-Detected Stack:
-- Backend: Django 4.2 (Python)
-- Frontend: React 18 with TypeScript
-- Database: PostgreSQL
-
-Configured Specialists:
-- API: @django-api-developer
-- Backend: @django-backend-expert
-- Frontend: @react-component-architect
-- Database: @django-orm-expert
-
-Your AI development team is ready!
-```
 
 ## 👥 Meet Your AI Development Team
 
 ### 🎭 Orchestrators (3 agents)
-- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Coordinates complex projects through three-phase workflow
-- **[Project Analyst](agents/orchestrators/project-analyst.md)** - Detects your tech stack and enables smart routing
-- **[Team Configurator](agents/orchestrators/team-configurator.md)** - Sets up your perfect AI development team automatically
+- **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Senior technical lead who analyzes complex projects and coordinates multi-step development tasks
+- **[Project Analyst](agents/orchestrators/project-analyst.md)** - Technology stack detection specialist who enables intelligent agent routing
+- **[Team Configurator](agents/orchestrators/team-configurator.md)** - AI team setup expert who detects your stack and configures optimal agent mappings
 
-### 💼 Framework Specialists (15 agents)
-- **Laravel** - Backend Expert, API Architect, Eloquent Expert
-- **Django** - Backend Expert, API Developer, ORM Expert  
-- **Rails** - Backend Expert, API Developer, ActiveRecord Expert
-- **React** - Component Architect, State Manager, Next.js Expert
-- **Vue** - Component Architect, State Manager, Nuxt Expert
+### 💼 Framework Specialists (13 agents)
+- **Laravel (2 agents)**
+  - **[Backend Expert](agents/specialized/laravel/laravel-backend-expert.md)** - Comprehensive Laravel development with MVC, services, and Eloquent patterns
+  - **[Eloquent Expert](agents/specialized/laravel/laravel-eloquent-expert.md)** - Advanced ORM optimization, complex queries, and database performance
+- **Django (3 agents)**
+  - **[Backend Expert](agents/specialized/django/django-backend-expert.md)** - Models, views, services following current Django conventions
+  - **[API Developer](agents/specialized/django/django-api-developer.md)** - Django REST Framework and GraphQL implementations
+  - **[ORM Expert](agents/specialized/django/django-orm-expert.md)** - Query optimization and database performance for Django applications
+- **Rails (3 agents)**
+  - **[Backend Expert](agents/specialized/rails/rails-backend-expert.md)** - Full-stack Rails development following conventions
+  - **[API Developer](agents/specialized/rails/rails-api-developer.md)** - RESTful APIs and GraphQL with Rails patterns
+  - **[ActiveRecord Expert](agents/specialized/rails/rails-activerecord-expert.md)** - Complex queries and database optimization
+- **React (2 agents)**
+  - **[Component Architect](agents/specialized/react/react-component-architect.md)** - Modern React patterns, hooks, and component design
+  - **[Next.js Expert](agents/specialized/react/react-nextjs-expert.md)** - SSR, SSG, ISR, and full-stack Next.js applications
+- **Vue (3 agents)**
+  - **[Component Architect](agents/specialized/vue/vue-component-architect.md)** - Vue 3 Composition API and component patterns
+  - **[Nuxt Expert](agents/specialized/vue/vue-nuxt-expert.md)** - SSR, SSG, and full-stack Nuxt applications
+  - **[State Manager](agents/specialized/vue/vue-state-manager.md)** - Pinia and Vuex state architecture
 
 ### 🌐 Universal Experts (4 agents)
-- **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot programmer for any backend
-- **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern UI for any framework
-- **[API Architect](agents/universal/api-architect.md)** - RESTful and GraphQL design
-- **[Tailwind CSS Expert](agents/universal/tailwind-css-expert.md)** - Pixel-perfect responsive designs
+- **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot backend development across multiple languages and frameworks
+- **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern web technologies and responsive design for any framework
+- **[API Architect](agents/universal/api-architect.md)** - RESTful design, GraphQL, and framework-agnostic API architecture
+- **[Tailwind Frontend Expert](agents/universal/tailwind-css-expert.md)** - Tailwind CSS styling, utility-first development, and responsive components
 
 ### 🔧 Core Team (4 agents)
-- **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores and documents any codebase
-- **[Code Reviewer](agents/core/code-reviewer.md)** - Ensures quality and best practices
-- **[Performance Optimizer](agents/core/performance-optimizer.md)** - Makes everything blazing fast
-- **[Documentation Specialist](agents/core/documentation-specialist.md)** - Creates clear, comprehensive documentation
+- **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores, documents, and analyzes unfamiliar or legacy codebases
+- **[Code Reviewer](agents/core/code-reviewer.md)** - Rigorous security-aware reviews with severity-tagged reports
+- **[Performance Optimizer](agents/core/performance-optimizer.md)** - Identifies bottlenecks and applies optimizations for scalable systems
+- **[Documentation Specialist](agents/core/documentation-specialist.md)** - Crafts comprehensive READMEs, API specs, and technical documentation
 
-**Total: 26 specialized agents** working together to build your projects!
+**Total: 24 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 
-## 🎬 Real-World Examples
-
-### E-commerce Shopping Cart
-```
-You: "Add a shopping cart to my online store where users can add products, 
-update quantities, and see the total price with tax calculation"
-
-Tech Lead orchestrates:
-→ Research: 
-  • Project Analyst detects Laravel + Vue.js stack
-  • Code Archaeologist examines existing product/user models
-  • API Architect reviews current endpoint patterns
-  
-→ Planning: Creates tasks for cart schema, API endpoints, UI components
-  
-→ Execution:
-  • Laravel Backend Expert creates Cart model and relationships
-  • Laravel API Architect builds RESTful cart endpoints
-  • Vue Component Architect implements reactive cart sidebar
-  • Backend Developer integrates tax calculation API
-
-Result: Working cart with persistent storage, guest checkout support, 
-        and automatic tax calculation based on user location
-```
-
-### User Authentication System
-```
-You: "I need users to sign up with email verification, login with remember me 
-option, and reset forgotten passwords"
-
-Tech Lead orchestrates:
-→ Research:
-  • Project Analyst identifies Django + React setup
-  • Code Reviewer checks security requirements
-  • Django Backend Expert reviews existing User model
-  
-→ Planning: User model extension, JWT tokens, email templates, auth forms
-  
-→ Execution:
-  • Django Backend Expert implements registration with email verification
-  • Django API Developer creates secure auth endpoints
-  • React Component Architect builds responsive login/signup forms
-  • Performance Optimizer adds rate limiting and caching
-
-Result: Complete auth system with JWT tokens, secure password hashing,
-        email verification, and forgot password flow
-```
-
-### Analytics Dashboard
-```
-You: "Show me daily active users, revenue trends for last 30 days, and 
-top-selling products in a dashboard"
-
-Tech Lead orchestrates:
-→ Research:
-  • Project Analyst detects Rails + React with PostgreSQL
-  • Performance Optimizer profiles current query performance
-  • Rails Backend Expert identifies data sources
-  
-→ Planning: Aggregation queries, caching strategy, chart components
-  
-→ Execution:
-  • Rails ActiveRecord Expert writes optimized analytics queries
-  • Performance Optimizer implements Redis caching layer
-  • React Component Architect builds interactive Chart.js visualizations
-  • Rails API Developer creates efficient data endpoints
-
-Result: Real-time dashboard with sub-second load times, export functionality,
-        and mobile-responsive design
-```
 
 ## 🔥 Why Teams Beat Solo AI
 
@@ -205,9 +127,7 @@ Result: Real-time dashboard with sub-second load times, export functionality,
 
 ## 📚 Learn More
 
-- [How Agent Teams Collaborate](docs/agent-team.md) - See the magic behind team coordination
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
-- [Architecture Guide](docs/architecture.md) - Technical deep dive
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
 
 ## 💬 Join The Community
@@ -233,6 +153,6 @@ MIT License - Use freely in your projects!
 
 <p align="center">
   <a href="https://github.com/vijaythecoder/awesome-claude-agents">GitHub</a> •
-  <a href="docs/architecture.md">Documentation</a> •
+  <a href="docs/creating-agents.md">Documentation</a> •
   <a href="https://github.com/vijaythecoder/awesome-claude-agents/discussions">Community</a>
 </p>

@@ -22,17 +22,17 @@ git clone https://github.com/vijaythecoder/awesome-claude-agents.git
 
 **macOS/Linux:**
 ```bash
-ln -sf "$(pwd)/awesome-claude-agents/agents" ~/.claude/agents
+ln -sf "$(pwd)/awesome-claude-agents" ~/.claude/awesome-claude-agents
 ```
 
 **Windows (PowerShell):**
 ```powershell
-cmd /c mklink /D "$env:USERPROFILE\.claude\agents" "$(Get-Location)\awesome-claude-agents\agents"
+cmd /c mklink /D "$env:USERPROFILE\.claude\awesome-claude-agents" "$(Get-Location)\awesome-claude-agents"
 ```
 
 #### Option B: Copy (Static - no auto-updates)
 ```bash
-cp -r awesome-claude-agents/agents ~/.claude/
+cp -r awesome-claude-agents ~/.claude/
 ```
 
 ### 2. Verify Installation

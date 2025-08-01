@@ -12,6 +12,7 @@
 - **Claude Code CLI** installed and authenticated
 - **Claude subscription** - required for intensive agent workflows
 - Active project directory with your codebase
+- **Optional**: [Context7 MCP](docs/dependencies.md) for enhanced documentation access
 
 ### 1. Install the Agents
 ```bash

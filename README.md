@@ -22,17 +22,29 @@ git clone https://github.com/vijaythecoder/awesome-claude-agents.git
 
 **macOS/Linux:**
 ```bash
-ln -sf "$(pwd)/awesome-claude-agents" ~/.claude/awesome-claude-agents
+# Create agents directory if it doesn't exist (preserves existing agents)
+mkdir -p ~/.claude/agents
+
+# Symlink the awesome-claude-agents collection
+ln -sf "$(pwd)/awesome-claude-agents/agents/" ~/.claude/agents/awesome-claude-agents
 ```
 
 **Windows (PowerShell):**
 ```powershell
-cmd /c mklink /D "$env:USERPROFILE\.claude\awesome-claude-agents" "$(Get-Location)\awesome-claude-agents"
+# Create agents directory
+New-Item -Path "$env:USERPROFILE\.claude\agents" -ItemType Directory -Force
+
+# Create symlink
+cmd /c mklink /D "$env:USERPROFILE\.claude\agents\awesome-claude-agents" "$(Get-Location)\awesome-claude-agents\agents"
 ```
 
 #### Option B: Copy (Static - no auto-updates)
 ```bash
-cp -r awesome-claude-agents ~/.claude/
+# Create agents directory if it doesn't exist
+mkdir -p ~/.claude/agents
+
+# Copy all agents
+cp -r awesome-claude-agents/agents ~/.claude/agents/awesome-claude-agents
 ```
 
 ### 2. Verify Installation

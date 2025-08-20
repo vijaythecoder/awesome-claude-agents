@@ -8,7 +8,7 @@ Some agents reference Context7 MCP for fetching up-to-date documentation. While 
 
 1. Install Context7 MCP server:
 ```bash
-npm install -g @context7/mcp-server
+claude mcp add context7 -- npx -y @upstash/context7-mcp
 ```
 
 2. Configure in Claude's MCP settings:

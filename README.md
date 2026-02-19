@@ -51,7 +51,7 @@ cp -r awesome-claude-agents/agents ~/.claude/agents/awesome-claude-agents
 ### 2. Verify Installation
 ```bash
 claude /agents
-# Should show all 24 agents.
+# Should show all 25 agents.
 ```
 
 ### 3. Initialize Your Project
@@ -107,11 +107,12 @@ The @agent-team-configurator automatically sets up your perfect AI development t
   - **[Nuxt Expert](agents/specialized/vue/vue-nuxt-expert.md)** - SSR, SSG, and full-stack Nuxt applications
   - **[State Manager](agents/specialized/vue/vue-state-manager.md)** - Pinia and Vuex state architecture
 
-### 🌐 Universal Experts (4 agents)
+### 🌐 Universal Experts (5 agents)
 - **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot backend development across multiple languages and frameworks
 - **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern web technologies and responsive design for any framework
 - **[API Architect](agents/universal/api-architect.md)** - RESTful design, GraphQL, and framework-agnostic API architecture
 - **[Tailwind Frontend Expert](agents/universal/tailwind-css-expert.md)** - Tailwind CSS styling, utility-first development, and responsive components
+- **[Taskade Project Manager](agents/universal/taskade-project-manager.md)** - AI-powered project management, task tracking, and workflow automation via [Taskade MCP](https://github.com/taskade/mcp)
 
 ### 🔧 Core Team (4 agents)
 - **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores, documents, and analyzes unfamiliar or legacy codebases
@@ -119,7 +120,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - **[Performance Optimizer](agents/core/performance-optimizer.md)** - Identifies bottlenecks and applies optimizations for scalable systems
 - **[Documentation Specialist](agents/core/documentation-specialist.md)** - Crafts comprehensive READMEs, API specs, and technical documentation
 
-**Total: 24 specialized agents** working together to build your projects!
+**Total: 25 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 

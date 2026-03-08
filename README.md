@@ -140,8 +140,9 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 📚 Learn More
 
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
+- [agentskill.sh](https://agentskill.sh) - Browse and install 69,000+ AI agent skills for Claude Code, Cursor, Copilot, Windsurf, and 20+ AI tools
 
 ## 💬 Join The Community
 

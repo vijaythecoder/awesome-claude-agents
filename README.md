@@ -140,6 +140,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 📚 Learn More
 
+- [GNAP](https://github.com/farol-team/gnap) — Git-Native Agent Protocol: coordinate AI agent teams with 4 JSON files in a git repo. No server, no database, just git push/pull. MIT.
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
 

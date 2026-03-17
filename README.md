@@ -159,6 +159,13 @@ MIT License - Use freely in your projects!
 [![Star History Chart](https://api.star-history.com/svg?repos=vijaythecoder/awesome-claude-agents&type=Date)](https://www.star-history.com/#vijaythecoder/awesome-claude-agents&Date)
 ---
 
+## 🔗 Related Orchestration Tools
+
+Tools that complement or extend Claude agent workflows:
+
+- [ORCH](https://github.com/oxgeneral/ORCH) — CLI runtime for orchestrating AI agent teams (Claude Code, Codex, Cursor). State machine, auto-retry, messaging, goals, TUI. 1647 tests. MIT TypeScript.
+
+
 <p align="center">
   <strong>Transform Claude Code into an AI development team that ships production-ready features</strong><br>
   <em>Simple setup. Powerful results. Just describe and build.</em>

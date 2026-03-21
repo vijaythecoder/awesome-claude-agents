@@ -142,6 +142,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
+- [Skillfold](https://github.com/byronxlg/skillfold) - Configuration language and compiler for multi-agent AI pipelines. Compiles a single YAML config into agent skills for 11 platforms including Claude Code, Cursor, Copilot, and Gemini.
 
 ## 💬 Join The Community
 

@@ -113,13 +113,14 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - **[API Architect](agents/universal/api-architect.md)** - RESTful design, GraphQL, and framework-agnostic API architecture
 - **[Tailwind Frontend Expert](agents/universal/tailwind-css-expert.md)** - Tailwind CSS styling, utility-first development, and responsive components
 
-### 🔧 Core Team (4 agents)
+### 🔧 Core Team (5 agents)
 - **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores, documents, and analyzes unfamiliar or legacy codebases
 - **[Code Reviewer](agents/core/code-reviewer.md)** - Rigorous security-aware reviews with severity-tagged reports
-- **[Performance Optimizer](agents/core/performance-optimizer.md)** - Identifies bottlenecks and applies optimizations for scalable systems
 - **[Documentation Specialist](agents/core/documentation-specialist.md)** - Crafts comprehensive READMEs, API specs, and technical documentation
+- **[MCP Security Auditor](agents/core/mcp-security-auditor.md)** - Verifies MCP servers and AI skills before installation using [ClawSec](https://clawsec.cc) audit data and [ClawSearch](https://clawsearch.cc) trust scores
+- **[Performance Optimizer](agents/core/performance-optimizer.md)** - Identifies bottlenecks and applies optimizations for scalable systems
 
-**Total: 24 specialized agents** working together to build your projects!
+**Total: 25 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 

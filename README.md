@@ -140,8 +140,9 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 📚 Learn More
 
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
+- [claw-army/claude-node](https://github.com/claw-army/claude-node) - Python subprocess bridge for Claude Code CLI, giving Python code direct access to Claude Code native capabilities via stream-json.
 
 ## 💬 Join The Community
 

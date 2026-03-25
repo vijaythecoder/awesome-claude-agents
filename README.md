@@ -138,6 +138,10 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - **Learn As You Code** - See how experts approach problems
 - **Scale Confidently** - Architecture designed for growth
 
+## 🧠 Memory & Context
+
+- [Cortex](https://github.com/SKULLFIRE07/cortex-memory) - Persistent AI memory for coding assistants. Auto-captures decisions, patterns, and context from Claude Code, Cursor, and Cline sessions. VSCode extension + CLI + MCP server. Free.
+
 ## 📚 Learn More
 
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  

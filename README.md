@@ -82,10 +82,11 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 👥 Meet Your AI Development Team
 
-### 🎭 Orchestrators (3 agents)
+### 🎭 Orchestrators (3 agents + community)
 - **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Senior technical lead who analyzes complex projects and coordinates multi-step development tasks
 - **[Project Analyst](agents/orchestrators/project-analyst.md)** - Technology stack detection specialist who enables intelligent agent routing
 - **[Team Configurator](agents/orchestrators/team-configurator.md)** - AI team setup expert who detects your stack and configures optimal agent mappings
+- **[launch-swarm](https://github.com/harshmoney123/launch-swarm)** - 6-agent Claude Code swarm with strict role separation, dual-gate merge pipeline, and prompt health anti-rot. Agents plan, code, review, document, and deploy autonomously.
 
 ### 💼 Framework Specialists (13 agents)
 - **Laravel (2 agents)**

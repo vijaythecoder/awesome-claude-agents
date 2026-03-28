@@ -140,8 +140,12 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 📚 Learn More
 
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
+
+## 🔗 Related Tools
+
+- [claude-dash](https://github.com/krabat-l/claude-dash) - Real-time statusline for Claude Code — monitor context, cost, quota, cache, tools, and git status while your agents work
 
 ## 💬 Join The Community
 

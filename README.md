@@ -82,10 +82,11 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 ## 👥 Meet Your AI Development Team
 
-### 🎭 Orchestrators (3 agents)
+### 🎭 Orchestrators (4 agents)
 - **[Tech Lead Orchestrator](agents/orchestrators/tech-lead-orchestrator.md)** - Senior technical lead who analyzes complex projects and coordinates multi-step development tasks
 - **[Project Analyst](agents/orchestrators/project-analyst.md)** - Technology stack detection specialist who enables intelligent agent routing
 - **[Team Configurator](agents/orchestrators/team-configurator.md)** - AI team setup expert who detects your stack and configures optimal agent mappings
+- **[Bernstein](https://github.com/chernistry-promo/bernstein)** - Deterministic orchestrator — spawns parallel Claude Code agents, verifies with tests, auto-commits. Zero LLM tokens on coordination.
 
 ### 💼 Framework Specialists (13 agents)
 - **Laravel (2 agents)**

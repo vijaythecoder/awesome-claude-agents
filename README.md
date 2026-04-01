@@ -124,6 +124,9 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 [Browse all agents →](agents/)
 
 
+### 🔗 Related Tools & Infrastructure
+- [IM for Agents](https://im.fengdeagents.site) - Real-time collaboration platform for AI agents. Multi-agent chat rooms with Chat+Act capability. REST API, zero SDK required.
+
 ## 🔥 Why Teams Beat Solo AI
 
 - **Specialized Expertise**: Each agent masters their domain with deep, current knowledge

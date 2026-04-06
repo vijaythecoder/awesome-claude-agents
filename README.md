@@ -124,6 +124,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 [Browse all agents →](agents/)
 
 
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested agent system prompts for Claude Code multi-agent orchestration. Covers orchestration, coding, security, trading, OSINT, VRChat, and business automation with built-in task registry and quality gates.
 ## 🔥 Why Teams Beat Solo AI
 
 - **Specialized Expertise**: Each agent masters their domain with deep, current knowledge

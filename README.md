@@ -138,6 +138,11 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - **Learn As You Code** - See how experts approach problems
 - **Scale Confidently** - Architecture designed for growth
 
+
+## 🛒 AI Skills Marketplace
+
+- **[RemoteOpenClaw](https://remoteopenclaw.com)** - Open marketplace for AI skills and personas built on OpenClaw. Discover, share, and sell community-built agent capabilities.
+
 ## 📚 Learn More
 
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  

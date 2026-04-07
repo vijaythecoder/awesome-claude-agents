@@ -138,9 +138,16 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - **Learn As You Code** - See how experts approach problems
 - **Scale Confidently** - Architecture designed for growth
 
+## 🔌 Agent-Compatible CLI Tools
+
+CLI tools with JSON output designed to work in Claude Code agent pipelines:
+
+- **[Overloop CLI](https://github.com/sortlist/overloop-cli)** (`npm i -g overloop-cli`) - AI-powered outbound engine. Source prospects from 450M+ contacts, launch email + LinkedIn campaigns, manage conversations. JSON output, agent-native. [agent.overloop.ai](https://agent.overloop.ai)
+- **[Signals CLI](https://github.com/sortlist/signals-cli)** (`npm i -g signals-sortlist-cli`) - Intent signal monitoring. Track LinkedIn engagers, keyword posters, job changers, funding events. JSON output for agent pipelines.
+
 ## 📚 Learn More
 
-- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
+- [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
 
 ## 💬 Join The Community

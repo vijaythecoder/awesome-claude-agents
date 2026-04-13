@@ -149,6 +149,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 - 🐛 [Report issues](https://github.com/vijaythecoder/awesome-claude-agents/issues)
 - 💡 [Share ideas](https://github.com/vijaythecoder/awesome-claude-agents/discussions)
 - 🎉 [Success stories](https://github.com/vijaythecoder/awesome-claude-agents/discussions/categories/show-and-tell)
+- [CCHub](https://github.com/Moresl/cchub) - A desktop control panel for the Claude Code / Codex / Gemini CLI ecosystem. Manage MCP servers, config profiles, agent skills, CLAUDE.md, hooks, and workflow templates from a single Tauri app (Windows / macOS / Linux).
 
 ## 📄 License
 

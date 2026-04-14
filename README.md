@@ -68,6 +68,12 @@ claude "use @agent-tech-lead-orchestrator and build a user authentication system
 
 Your AI team will automatically detect your stack and use the right specialists!
 
+## 🔌 MCP servers
+
+Optional [Model Context Protocol](https://modelcontextprotocol.io) servers that extend Claude Code:
+
+- **[Helium](https://github.com/connerlambden/helium-mcp)** — Real-time news intelligence, market data, options pricing, bias analysis via MCP.
+
 ## 🎯 How Auto-Configuration Works
 
 The @agent-team-configurator automatically sets up your perfect AI development team. When invoked, it:

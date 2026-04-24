@@ -123,6 +123,8 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 [Browse all agents →](agents/)
 
+### 🌍 Community Agent Collections
+- **[Claude Skills](https://github.com/megabytespace/claude-skills)** by [Brian Zalewski](https://github.com/ProfessorManhattan) - 18 specialized agents (architect, code-simplifier, completeness-checker, deploy-verifier, security-reviewer, test-writer, seo-auditor, visual-qa, computer-use-operator, dependency-auditor, meta-orchestrator, migration-agent, content-writer, performance-profiler, incident-responder, accessibility-auditor, cost-estimator, changelog-generator) as part of a 14-category autonomous product-building OS. Model-routed orchestration deploys opus for architecture/security, sonnet for implementation, haiku for formatting. One-line prompts to deployed products on Cloudflare Workers.
 
 ## 🔥 Why Teams Beat Solo AI
 

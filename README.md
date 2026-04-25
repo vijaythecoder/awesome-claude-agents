@@ -107,19 +107,21 @@ The @agent-team-configurator automatically sets up your perfect AI development t
   - **[Nuxt Expert](agents/specialized/vue/vue-nuxt-expert.md)** - SSR, SSG, and full-stack Nuxt applications
   - **[State Manager](agents/specialized/vue/vue-state-manager.md)** - Pinia and Vuex state architecture
 
-### 🌐 Universal Experts (4 agents)
+### 🌐 Universal Experts (5 agents)
 - **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot backend development across multiple languages and frameworks
 - **[Frontend Developer](agents/universal/frontend-developer.md)** - Modern web technologies and responsive design for any framework
 - **[API Architect](agents/universal/api-architect.md)** - RESTful design, GraphQL, and framework-agnostic API architecture
 - **[Tailwind Frontend Expert](agents/universal/tailwind-css-expert.md)** - Tailwind CSS styling, utility-first development, and responsive components
+- **[Visual Asset Generator](agents/universal/visual-asset-generator.md)** - Production-ready app icons, OG images, logos, and social banners via prompt-to-asset MCP (30+ image models)
 
-### 🔧 Core Team (4 agents)
+### 🔧 Core Team (5 agents)
 - **[Code Archaeologist](agents/core/code-archaeologist.md)** - Explores, documents, and analyzes unfamiliar or legacy codebases
 - **[Code Reviewer](agents/core/code-reviewer.md)** - Rigorous security-aware reviews with severity-tagged reports
 - **[Performance Optimizer](agents/core/performance-optimizer.md)** - Identifies bottlenecks and applies optimizations for scalable systems
 - **[Documentation Specialist](agents/core/documentation-specialist.md)** - Crafts comprehensive READMEs, API specs, and technical documentation
+- **[Content Quality Editor](agents/core/content-quality-editor.md)** - Strips AI writing patterns from published content using unslop before docs go live
 
-**Total: 24 specialized agents** working together to build your projects!
+**Total: 26 specialized agents** working together to build your projects!
 
 [Browse all agents →](agents/)
 

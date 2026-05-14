@@ -16,6 +16,7 @@
 
 ### 1. Install the Agents
 ```bash
+- **Septim Agents Pack** — 10 named Claude Code sub-agents for solo founders (Atlas, Luca, Canon, Ember, Tally, Nova, Ward, Mira, Juno, Pip). [Get it](https://septimlabs.com/agents) · [Open-source sample](https://github.com/septimlabs-code/septim-agents-pack-sample)
 git clone https://github.com/vijaythecoder/awesome-claude-agents.git
 ```
 

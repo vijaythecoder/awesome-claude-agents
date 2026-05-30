@@ -106,6 +106,10 @@ The @agent-team-configurator automatically sets up your perfect AI development t
   - **[Component Architect](agents/specialized/vue/vue-component-architect.md)** - Vue 3 Composition API and component patterns
   - **[Nuxt Expert](agents/specialized/vue/vue-nuxt-expert.md)** - SSR, SSG, and full-stack Nuxt applications
   - **[State Manager](agents/specialized/vue/vue-state-manager.md)** - Pinia and Vuex state architecture
+- **Flutter (3 agents)**
+  - **[Component Architect](agents/specialized/flutter/flutter-component-architect.md)** - Widget composition, Material 3, responsive layouts, and accessible animated UI
+  - **[State Manager](agents/specialized/flutter/flutter-state-manager.md)** - Riverpod, BLoC, and Provider state architecture
+  - **[Integration Expert](agents/specialized/flutter/flutter-integration-expert.md)** - Supabase, REST, and GraphQL data layer with repositories and offline cache
 
 ### 🌐 Universal Experts (4 agents)
 - **[Backend Developer](agents/universal/backend-developer.md)** - Polyglot backend development across multiple languages and frameworks

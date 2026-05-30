@@ -49,12 +49,12 @@ Task 2: [description] → AGENT: @agent-[exact-agent-name]
 Check system context for available agents. Categories include:
 - **Orchestrators**: planning, analysis
 - **Core**: review, performance, documentation  
-- **Framework-specific**: Django, Rails, React, Vue specialists
+- **Framework-specific**: Django, Rails, React, Vue, Flutter specialists
 - **Universal**: generic fallbacks
 
 Selection rules:
 - Prefer specific over generic (django-backend-expert > backend-developer)
-- Match technology exactly (Django API → django-api-developer)
+- Match technology exactly (Django API → django-api-developer; Flutter UI → flutter-component-architect; Flutter state → flutter-state-manager; Flutter data/Supabase → flutter-integration-expert)
 - Use universal agents only when no specialist exists
 
 ## Example

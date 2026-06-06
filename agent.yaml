@@ -1,0 +1,53 @@
+spec_version: "0.1.0"
+name: awesome-claude-agents
+version: 1.0.0
+description: >
+  An orchestrated team of 24+ specialised Claude Code sub-agents that work
+  together to build complete features for any technology stack. A tech-lead
+  orchestrator routes every task to the right specialist — framework experts
+  for Django, Rails, Laravel, React, and Vue; core agents for code review,
+  performance optimisation, and documentation; plus universal fallbacks for
+  any stack. Drop the collection into ~/.claude/agents/ and invoke
+  @agent-tech-lead-orchestrator to get started.
+author: vijaythecoder
+license: MIT
+
+model:
+  preferred: anthropic:claude-sonnet-4-6
+  constraints:
+    temperature: 0.3
+
+skills:
+  - tech-lead-orchestrator
+  - project-analyst
+  - team-configurator
+  - code-reviewer
+  - code-archaeologist
+  - performance-optimizer
+  - documentation-specialist
+  - django-backend-expert
+  - django-api-developer
+  - django-orm-expert
+  - rails-backend-expert
+  - rails-api-developer
+  - react-component-architect
+  - vue-component-architect
+  - laravel-backend-expert
+  - laravel-eloquent-expert
+  - backend-developer
+  - frontend-developer
+  - api-architect
+  - tailwind-css-expert
+
+runtime:
+  max_turns: 100
+
+compliance:
+  risk_tier: standard
+  supervision:
+    human_in_the_loop: destructive
+    kill_switch: true
+  recordkeeping:
+    audit_logging: false
+  data_governance:
+    pii_handling: none

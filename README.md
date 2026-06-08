@@ -13,6 +13,7 @@
 - **Claude subscription** - required for intensive agent workflows
 - Active project directory with your codebase
 - **Optional**: [Context7 MCP](docs/dependencies.md) for enhanced documentation access
+- **Optional**: [TWZRD Agent Intel MCP](https://intel.twzrd.xyz) for agent trust scoring before x402 micropayments — verify Solana wallet identity of agents in multi-agent workflows: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
 
 ### 1. Install the Agents
 ```bash

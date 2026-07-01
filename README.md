@@ -142,6 +142,7 @@ The @agent-team-configurator automatically sets up your perfect AI development t
 
 - [Creating Custom Agents](docs/creating-agents.md) - Build specialists for your needs  
 - [Best Practices](docs/best-practices.md) - Get the most from your AI team
+- [Vexilo · A field guide to Claude Code](https://vexilo.app/?lang=en) — Visual interactive index of 31 agents · 99 commands · 123 skills · 13 rules, organized around the 5-step workflow. One-click "Teach Claude this handbook" feeds the whole index into a local session in 30s. ([companion repo](https://github.com/lilhawk7077/claude-code-resources))
 
 ## 💬 Join The Community
 

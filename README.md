@@ -157,6 +157,8 @@ MIT License - Use freely in your projects!
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vijaythecoder/awesome-claude-agents&type=Date)](https://www.star-history.com/#vijaythecoder/awesome-claude-agents&Date)
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts for Claude Code: 4 structured Markdown templates + 5 skills (crm-everything, open-loops, watchers, morning-briefing, session-digest). Start every session context-full, not context-zero. MIT, one-command install.
+
 ---
 
 <p align="center">

@@ -169,3 +169,7 @@ MIT License - Use freely in your projects!
   <a href="docs/creating-agents.md">Documentation</a> •
   <a href="https://github.com/vijaythecoder/awesome-claude-agents/discussions">Community</a>
 </p>
+
+### Spoken Context & Local AI MCP Hardware
+
+- [OneMira C1 & onemira-mcp](https://onemira.com/products/c1) - Standalone dual-microphone AI voice recorder with local AI transcription, multi-speaker separation (Speaker ID), Google Native OKF Markdown Wiki, and native Claude/Cursor MCP server ([onemira-mcp](https://github.com/onemira-space/onemira-mcp)) with zero cloud subscription.
